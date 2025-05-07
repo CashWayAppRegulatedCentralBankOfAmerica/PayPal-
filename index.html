@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PayPal Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayPal UI Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1c1XKfw5Ot0x3hWn95s6jU8bbTqYP3bm5PAI9h6eVAnkzVgxvDdq+WqPZP5RZlYZ0Ex1zLO4o4cZmOVU1Alc2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       margin: 0;
@@ -11,43 +12,31 @@
       background: #f2f4fc;
       color: #000;
     }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 15px;
-      font-size: 16px;
-    }
-    .profile-pic {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+    .container {
+      padding: 20px 15px 90px;
     }
     .balance-box {
       background: white;
-      margin: 15px;
       padding: 20px;
       border-radius: 15px;
       font-size: 18px;
     }
     .balance-box strong {
-      font-size: 24px;
+      font-size: 28px;
       display: block;
       margin-top: 5px;
     }
     .section-title {
-      margin: 20px 15px 10px;
+      margin: 25px 0 10px;
       font-weight: bold;
       font-size: 18px;
     }
     .send-payments {
       background: white;
-      margin: 0 15px 20px;
       padding: 20px;
       border-radius: 15px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
     }
     .send-payments div {
       flex: 1;
@@ -60,7 +49,7 @@
     }
     .transaction {
       background: white;
-      margin: 0 15px 15px;
+      margin-top: 15px;
       padding: 15px;
       border-radius: 15px;
       display: flex;
@@ -75,7 +64,7 @@
       align-items: center;
       justify-content: center;
       color: white;
-      font-weight: bold;
+      font-size: 20px;
       margin-right: 15px;
     }
     .transaction-details {
@@ -85,12 +74,26 @@
       font-weight: bold;
     }
     .positive {
-      color: green;
+      color: #107c10;
     }
     .negative {
-      color: red;
+      color: #d93c3c;
     }
-    .footer {
+    .btns {
+      display: flex;
+      justify-content: space-around;
+      margin: 25px 0;
+    }
+    .btns button {
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 32px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .bottom-nav {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -102,81 +105,84 @@
       padding: 10px 0;
       border-top: 1px solid #ccc;
     }
-    .footer button {
-      background: black;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      padding: 10px 30px;
-      font-size: 16px;
-      margin: 0 10px;
-    }
-    .footer-icons {
+    .bottom-nav div {
       text-align: center;
-      font-size: 12px;
+      font-size: 14px;
+      color: #333;
+    }
+    .profile-icon {
+      position: absolute;
+      top: 20px;
+      right: 15px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .profile-icon img {
+      width: 100%;
+      height: auto;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <span>5:34 pm 🗎</span>
-    <img class="profile-pic" src="https://via.placeholder.com/36x36.png?text=P" alt="Profile"/>
-    <span>🔇 📶 4G 📶 🔋14%</span>
-  </header>
-
-  <div class="balance-box">
-    PayPal balance
-    <strong>US$0.13</strong>
+  <div class="profile-icon">
+    <img src="https://via.placeholder.com/36x36.png?text=P" alt="Profile" />
   </div>
 
-  <div class="section-title">Send Payments</div>
+  <div class="container">
+    <div class="balance-box">
+      PayPal balance
+      <strong>US$0.13</strong>
+    </div>
 
-  <div class="send-payments">
-    <div>
-      <strong>Pay From Your Phone</strong><br/>
-      <small>For the things you love.</small>
-      <div class="send-now">Send now</div>
+    <div class="section-title">Send Payments</div>
+
+    <div class="send-payments">
+      <div>
+        <strong>Pay From Your Phone</strong><br />
+        <small>For the things you love.</small>
+        <div class="send-now">Send now</div>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="transaction-icon"><i class="fa-solid fa-store"></i></div>
+      <div class="transaction-details">
+        <strong>PrankTexts.com</strong><br />
+        <small>27 Apr • Payment</small>
+      </div>
+      <div class="amount negative">-US$1.00</div>
+    </div>
+
+    <div class="transaction">
+      <div class="transaction-icon"><i class="fa-solid fa-store"></i></div>
+      <div class="transaction-details">
+        <strong>THUNES</strong><br />
+        <small>27 Apr • Payment received</small>
+      </div>
+      <div class="amount positive">+US$1.13</div>
+    </div>
+
+    <div class="transaction">
+      <div class="transaction-icon"><i class="fa-solid fa-store"></i></div>
+      <div class="transaction-details">
+        <strong>THUNES</strong><br />
+        <small>18 Apr • Payment</small>
+      </div>
+      <div class="amount negative">-US$1.49</div>
+    </div>
+
+    <div class="btns">
+      <button>Send</button>
+      <button>Request</button>
     </div>
   </div>
 
-  <div class="transaction">
-    <div class="transaction-icon">🏪</div>
-    <div class="transaction-details">
-      <strong>PrankTexts.com</strong><br/>
-      <small>27 Apr • Payment</small>
-    </div>
-    <div class="amount negative">-US$1</div>
+  <div class="bottom-nav">
+    <div><i class="fa-solid fa-house"></i><br/>Home</div>
+    <div><i class="fa-solid fa-dollar-sign"></i><br/>Payments</div>
+    <div><i class="fa-solid fa-wallet"></i><br/>Wallet</div>
   </div>
-
-  <div class="transaction">
-    <div class="transaction-icon">🏪</div>
-    <div class="transaction-details">
-      <strong>THUNES</strong><br/>
-      <small>27 Apr • Payment received</small>
-    </div>
-    <div class="amount positive">+US$1.13</div>
-  </div>
-
-  <div class="transaction">
-    <div class="transaction-icon">🏪</div>
-    <div class="transaction-details">
-      <strong>THUNES</strong><br/>
-      <small>18 Apr • Payment</small>
-    </div>
-    <div class="amount negative">-US$1.49</div>
-  </div>
-
-  <div class="footer">
-    <button>Send</button>
-    <button>Request</button>
-  </div>
-
-  <div class="footer-icons">
-    <div>🏠 Home</div>
-    <div>💲 Payments</div>
-    <div>👛 Wallet</div>
-  </div>
-
 </body>
 </html>
