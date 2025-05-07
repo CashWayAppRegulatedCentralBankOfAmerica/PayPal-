@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PayPal Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f4fc;
+      color: #000;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+    .profile-pic {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+    .balance-box {
+      background: white;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 15px;
+      font-size: 18px;
+    }
+    .balance-box strong {
+      font-size: 24px;
+      display: block;
+      margin-top: 5px;
+    }
+    .section-title {
+      margin: 20px 15px 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .send-payments {
+      background: white;
+      margin: 0 15px 20px;
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .send-payments div {
+      flex: 1;
+    }
+    .send-now {
+      color: #0070ba;
+      text-decoration: underline;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .transaction {
+      background: white;
+      margin: 0 15px 15px;
+      padding: 15px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .transaction-icon {
+      width: 50px;
+      height: 50px;
+      background: #0070f3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    .transaction-details {
+      flex: 1;
+    }
+    .amount {
+      font-weight: bold;
+    }
+    .positive {
+      color: green;
+    }
+    .negative {
+      color: red;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid #ccc;
+    }
+    .footer button {
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 30px;
+      font-size: 16px;
+      margin: 0 10px;
+    }
+    .footer-icons {
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span>5:34 pm 🗎</span>
+    <img class="profile-pic" src="https://via.placeholder.com/36x36.png?text=P" alt="Profile"/>
+    <span>🔇 📶 4G 📶 🔋14%</span>
+  </header>
+
+  <div class="balance-box">
+    PayPal balance
+    <strong>US$0.13</strong>
+  </div>
+
+  <div class="section-title">Send Payments</div>
+
+  <div class="send-payments">
+    <div>
+      <strong>Pay From Your Phone</strong><br/>
+      <small>For the things you love.</small>
+      <div class="send-now">Send now</div>
+    </div>
+  </div>
+
+  <div class="transaction">
+    <div class="transaction-icon">🏪</div>
+    <div class="transaction-details">
+      <strong>PrankTexts.com</strong><br/>
+      <small>27 Apr • Payment</small>
+    </div>
+    <div class="amount negative">-US$1</div>
+  </div>
+
+  <div class="transaction">
+    <div class="transaction-icon">🏪</div>
+    <div class="transaction-details">
+      <strong>THUNES</strong><br/>
+      <small>27 Apr • Payment received</small>
+    </div>
+    <div class="amount positive">+US$1.13</div>
+  </div>
+
+  <div class="transaction">
+    <div class="transaction-icon">🏪</div>
+    <div class="transaction-details">
+      <strong>THUNES</strong><br/>
+      <small>18 Apr • Payment</small>
+    </div>
+    <div class="amount negative">-US$1.49</div>
+  </div>
+
+  <div class="footer">
+    <button>Send</button>
+    <button>Request</button>
+  </div>
+
+  <div class="footer-icons">
+    <div>🏠 Home</div>
+    <div>💲 Payments</div>
+    <div>👛 Wallet</div>
+  </div>
+
+</body>
+</html>
