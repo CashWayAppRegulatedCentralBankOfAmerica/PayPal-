@@ -36,11 +36,25 @@
       padding: 20px;
       border-radius: 15px;
       font-size: 18px;
+      display: flex;
+      align-items: center;
     }
-    .balance-box strong {
+    .balance-icon {
+      margin-right: 15px;
       font-size: 28px;
-      display: block;
+      color: #003087;
+    }
+    .balance-text {
+      flex: 1;
+    }
+    .balance-amount {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .balance-label {
+      color: #555;
       margin-top: 5px;
+      font-size: 14px;
     }
     .section-title {
       margin: 25px 0 10px;
@@ -126,9 +140,8 @@
       font-size: 14px;
       color: #333;
     }
-    .bottom-nav img {
-      width: 24px;
-      height: 24px;
+    .bottom-nav i {
+      font-size: 22px;
       margin-bottom: 4px;
     }
   </style>
@@ -142,8 +155,11 @@
     </div>
 
     <div class="balance-box">
-      PayPal balance
-      <strong>US$0.13</strong>
+      <div class="balance-icon"><i class="fab fa-paypal"></i></div>
+      <div class="balance-text">
+        <div class="balance-amount">US$0.13</div>
+        <div class="balance-label">PayPal balance</div>
+      </div>
     </div>
 
     <div class="section-title">Send Payments</div>
@@ -191,15 +207,15 @@
 
   <div class="bottom-nav">
     <div>
-      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="Home">
+      <i class="fa-solid fa-house"></i>
       <div>Home</div>
     </div>
     <div>
-      <img src="https://www.paypalobjects.com/webstatic/icon/pp213.png" alt="Payments">
+      <i class="fa-solid fa-dollar-sign"></i>
       <div>Payments</div>
     </div>
     <div>
-      <img src="https://www.paypalobjects.com/webstatic/icon/pp214.png" alt="Wallet">
+      <i class="fa-solid fa-wallet"></i>
       <div>Wallet</div>
     </div>
   </div>
