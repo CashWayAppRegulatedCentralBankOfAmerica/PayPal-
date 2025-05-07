@@ -13,7 +13,23 @@
       color: #000;
     }
     .container {
-      padding: 20px 15px 90px;
+      padding: 20px 15px 0;
+      padding-bottom: 100px;
+    }
+    .top-bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .profile-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .profile-icon img {
+      width: 100%;
+      height: auto;
     }
     .balance-box {
       background: white;
@@ -74,15 +90,15 @@
       font-weight: bold;
     }
     .positive {
-      color: #107c10;
+      color: #007b5f;
     }
     .negative {
-      color: #d93c3c;
+      color: #000000;
     }
     .btns {
       display: flex;
       justify-content: space-around;
-      margin: 25px 0;
+      margin: 20px 0 10px;
     }
     .btns button {
       background: black;
@@ -102,7 +118,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 10px 0;
+      padding: 10px 0 5px;
       border-top: 1px solid #ccc;
     }
     .bottom-nav div {
@@ -110,27 +126,21 @@
       font-size: 14px;
       color: #333;
     }
-    .profile-icon {
-      position: absolute;
-      top: 20px;
-      right: 15px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-    .profile-icon img {
-      width: 100%;
-      height: auto;
+    .bottom-nav img {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 4px;
     }
   </style>
 </head>
 <body>
-  <div class="profile-icon">
-    <img src="https://via.placeholder.com/36x36.png?text=P" alt="Profile" />
-  </div>
-
   <div class="container">
+    <div class="top-bar">
+      <div class="profile-icon">
+        <img src="https://via.placeholder.com/36x36.png?text=P" alt="Profile" />
+      </div>
+    </div>
+
     <div class="balance-box">
       PayPal balance
       <strong>US$0.13</strong>
@@ -180,9 +190,18 @@
   </div>
 
   <div class="bottom-nav">
-    <div><i class="fa-solid fa-house"></i><br/>Home</div>
-    <div><i class="fa-solid fa-dollar-sign"></i><br/>Payments</div>
-    <div><i class="fa-solid fa-wallet"></i><br/>Wallet</div>
+    <div>
+      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="Home">
+      <div>Home</div>
+    </div>
+    <div>
+      <img src="https://www.paypalobjects.com/webstatic/icon/pp213.png" alt="Payments">
+      <div>Payments</div>
+    </div>
+    <div>
+      <img src="https://www.paypalobjects.com/webstatic/icon/pp214.png" alt="Wallet">
+      <div>Wallet</div>
+    </div>
   </div>
 </body>
 </html>
