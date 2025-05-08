@@ -1,144 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PayPal Dashboard Clone</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>PayPal Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f7fa;
-        }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f1f3f6;
+      }
     </style>
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="bg-white shadow-sm p-4 flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal Logo" class="h-8">
-            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Activity</a>
-            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Send & Request</a>
-            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Wallet</a>
-            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Deals</a>
-            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Help</a>
-        </div>
-        <div class="flex items-center space-x-4">
-            <button class="relative text-gray-600 hover:text-blue-600">
-                <i class="fas fa-bell text-lg"></i>
-                <span class="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs px-1">3</span>
-            </button>
-            <img src="YOUR_DP_URL_HERE" alt="Profile" class="h-8 w-8 rounded-full object-cover border-2 border-gray-300">
-            <button class="text-gray-700 hover:text-blue-600"><i class="fas fa-sign-out-alt"></i></button>
-        </div>
-    </nav>
+  </head>
+  <body class="pb-24">
+    <!-- Header -->
+    <div class="flex items-center justify-between px-4 pt-4">
+      <div class="text-sm text-gray-700">5:34 pm</div>
+      <div class="flex gap-2 text-gray-500 text-lg">
+        <i class="fas fa-signal"></i>
+        <span>🔋14%</span>
+      </div>
+    </div>
 
-    <!-- Main -->
-    <main class="max-w-6xl mx-auto p-6">
-        <!-- Balance -->
-        <div class="bg-white shadow rounded-lg p-6 flex justify-between items-center mb-6">
+    <!-- Profile -->
+    <div class="p-4">
+      <img
+        src="https://i.imgur.com/5Z6yQXJ.png"
+        alt="Profile"
+        class="h-12 w-12 rounded-full"
+      />
+    </div>
+
+    <!-- Balance Card -->
+    <div class="px-4">
+      <div class="bg-white rounded-2xl shadow-sm p-4 flex items-center space-x-4">
+        <div class="bg-gray-100 rounded-full p-2">
+          <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" class="h-6 w-6" />
+        </div>
+        <div>
+          <p class="text-xl font-bold">US$0.13</p>
+          <p class="text-gray-500 text-sm">PayPal balance</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Send Payments -->
+    <div class="px-4 mt-6">
+      <h2 class="text-lg font-semibold">Send Payments</h2>
+      <div class="bg-white rounded-2xl shadow-sm p-4 mt-2">
+        <div class="flex items-center space-x-4">
+          <img src="https://i.imgur.com/KHEKzXK.png" alt="Icon" class="h-8 w-8" />
+          <div class="flex flex-col">
+            <p class="font-semibold">Pay From Your Phone</p>
+            <p class="text-gray-500 text-sm">For the things you love.</p>
+          </div>
+        </div>
+        <a href="#" class="text-blue-600 text-sm font-medium mt-2 block">Send now</a>
+      </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="px-4 mt-6">
+      <div class="bg-white rounded-2xl shadow-sm divide-y">
+        <!-- Item 1 -->
+        <div class="flex items-center justify-between p-4">
+          <div class="flex space-x-3">
+            <div class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white">
+              <i class="fas fa-store"></i>
+            </div>
             <div>
-                <p class="text-gray-500">PayPal Balance</p>
-                <h2 class="text-3xl font-bold text-gray-800">$5,230.00 USD</h2>
+              <p class="font-semibold">PrankTexts.com</p>
+              <p class="text-gray-500 text-sm">27 Apr</p>
+              <p class="text-gray-500 text-sm">Payment</p>
             </div>
-            <div class="flex space-x-4">
-                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium flex items-center">
-                    <i class="fas fa-paper-plane mr-2"></i> Send
-                </button>
-                <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded font-medium flex items-center">
-                    <i class="fas fa-plus-circle mr-2"></i> Add Money
-                </button>
-                <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded font-medium flex items-center">
-                    <i class="fas fa-university mr-2"></i> Transfer
-                </button>
-            </div>
+          </div>
+          <p class="text-black font-semibold">-US$1</p>
         </div>
 
-        <!-- Linked Accounts -->
-        <div class="bg-white shadow rounded-lg p-6 mb-6">
-            <h3 class="text-lg font-semibold text-gray-800 mb-4">Linked Accounts</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="flex items-center justify-between p-4 border rounded">
-                    <div class="flex items-center space-x-4">
-                        <i class="fas fa-university text-2xl text-blue-600"></i>
-                        <div>
-                            <p class="text-gray-700 font-medium">Bank of America</p>
-                            <p class="text-gray-500 text-sm">Ending in 1234</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 font-medium">$3,200.00</p>
-                </div>
-                <div class="flex items-center justify-between p-4 border rounded">
-                    <div class="flex items-center space-x-4">
-                        <i class="far fa-credit-card text-2xl text-blue-600"></i>
-                        <div>
-                            <p class="text-gray-700 font-medium">Visa Card</p>
-                            <p class="text-gray-500 text-sm">Ending in 5678</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 font-medium">$1,000.00</p>
-                </div>
+        <!-- Item 2 -->
+        <div class="flex items-center justify-between p-4">
+          <div class="flex space-x-3">
+            <div class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white">
+              <i class="fas fa-store"></i>
             </div>
+            <div>
+              <p class="font-semibold">THUNES</p>
+              <p class="text-gray-500 text-sm">27 Apr</p>
+              <p class="text-gray-500 text-sm">Payment received</p>
+            </div>
+          </div>
+          <p class="text-green-600 font-semibold">+US$1.13</p>
         </div>
 
-        <!-- Recent Activity -->
-        <div class="bg-white shadow rounded-lg p-6 mb-6">
-            <h3 class="text-lg font-semibold text-gray-800 mb-4">Recent Activity</h3>
-            <ul class="divide-y divide-gray-200">
-                <li class="flex justify-between py-4 items-center">
-                    <div class="flex items-center space-x-4">
-                        <i class="fas fa-arrow-circle-up text-green-500 text-xl"></i>
-                        <div>
-                            <p class="text-gray-700 font-medium">Payment received from John Doe</p>
-                            <p class="text-gray-500 text-sm">April 5, 2025</p>
-                        </div>
-                    </div>
-                    <p class="text-green-500 font-medium">+ $500.00</p>
-                </li>
-                <li class="flex justify-between py-4 items-center">
-                    <div class="flex items-center space-x-4">
-                        <i class="fas fa-arrow-circle-down text-red-500 text-xl"></i>
-                        <div>
-                            <p class="text-gray-700 font-medium">Payment sent to Jane Smith</p>
-                            <p class="text-gray-500 text-sm">April 3, 2025</p>
-                        </div>
-                    </div>
-                    <p class="text-red-500 font-medium">- $200.00</p>
-                </li>
-                <li class="flex justify-between py-4 items-center">
-                    <div class="flex items-center space-x-4">
-                        <i class="fas fa-file-invoice-dollar text-yellow-500 text-xl"></i>
-                        <div>
-                            <p class="text-gray-700 font-medium">Invoice paid to XYZ Corp.</p>
-                            <p class="text-gray-500 text-sm">March 29, 2025</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 font-medium">- $150.00</p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Notifications -->
-        <div class="bg-white shadow rounded-lg p-6">
-            <h3 class="text-lg font-semibold text-gray-800 mb-4">Notifications</h3>
-            <div class="space-y-3">
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-shield-alt text-blue-600"></i>
-                    <p class="text-gray-700 text-sm">Your account security has been updated successfully.</p>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-info-circle text-blue-600"></i>
-                    <p class="text-gray-700 text-sm">Reminder: Your linked Visa card will expire soon.</p>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-check-circle text-green-500"></i>
-                    <p class="text-gray-700 text-sm">You have successfully linked a new bank account.</p>
-                </div>
+        <!-- Item 3 -->
+        <div class="flex items-center justify-between p-4">
+          <div class="flex space-x-3">
+            <div class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white">
+              <i class="fas fa-store"></i>
             </div>
+            <div>
+              <p class="font-semibold">THUNES</p>
+              <p class="text-gray-500 text-sm">18 Apr</p>
+              <p class="text-gray-500 text-sm">Payment</p>
+            </div>
+          </div>
+          <p class="text-black font-semibold">-US$1.49</p>
         </div>
-    </main>
-</body>
-                  </html>
+      </div>
+    </div>
+
+    <!-- Send & Request Buttons -->
+    <div class="px-4 mt-6 flex justify-between">
+      <button class="w-[48%] bg-black text-white text-lg font-semibold rounded-full py-3">Send</button>
+      <button class="w-[48%] bg-black text-white text-lg font-semibold rounded-full py-3">Request</button>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="fixed bottom-0 w-full bg-white border-t px-4 py-2 flex justify-between text-sm text-gray-600">
+      <div class="flex flex-col items-center text-black">
+        <i class="fas fa-home text-xl"></i>
+        <span class="text-xs font-semibold mt-1">Home</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-dollar-sign text-xl"></i>
+        <span class="text-xs mt-1">Payments</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-wallet text-xl"></i>
+        <span class="text-xs mt-1">Wallet</span>
+      </div>
+    </div>
+
+    <!-- FontAwesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
