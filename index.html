@@ -49,13 +49,13 @@
 <div class="bg-white rounded-xl px-4 py-5 flex items-center justify-between">
   <div class="flex items-start space-x-3">
     <!-- Icon and label below it -->
-    <div class="flex flex-col items-start mr-[-8px]"> <!-- Pulled image left -->
-      <img src="images.png" class="h-8 w-8 rounded-full" />
-      <p class="text-[10px] text-gray-500 mt-1">Payment received</p>
+    <div class="flex flex-col items-start">
+      <img src="images.png" class="h-8 w-8 rounded-full ml-[-8px]" /> <!-- Pulled image left -->
+      <p class="text-[10px] text-gray-500 mt-1 ml-[-8px]">Payment received</p> <!-- Pulled text left -->
     </div>
 
     <!-- Name and date aligned to image -->
-    <div class="flex flex-col justify-center ml-[-8px]"> <!-- Pulled name and date left -->
+    <div class="flex flex-col justify-center -mt-1 ml-[-8px]"> <!-- Pulled name and date left -->
       <p class="text-sm font-semibold">PrankTexts.com</p>
       <p class="text-xs text-gray-500">27 Apr</p>
     </div>
@@ -64,6 +64,7 @@
   <!-- Amount -->
   <p class="font-bold text-sm">-US$1</p>
 </div>
+
 
   <!-- Transaction 2 -->
   <div class="bg-white rounded-xl px-4 py-5 flex items-center justify-between">
