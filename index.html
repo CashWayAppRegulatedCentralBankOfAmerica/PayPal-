@@ -14,18 +14,17 @@
         font-family: 'Inter', sans-serif;
         background-color: #f1f3f6;
       }
+      .paypal-dollar {
+        font-family: Helvetica, Arial, sans-serif;
+      }
     </style>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="pb-24">
-    <!-- Header -->
-    <div class="flex items-center justify-between px-4 pt-4">
-      <div class="text-sm text-gray-700">5:34 pm</div>
-      <div class="flex gap-2 text-gray-500 text-lg">
-        <i class="fas fa-signal"></i>
-        <span>🔋14%</span>
-      </div>
-    </div>
-
     <!-- Profile -->
     <div class="p-4">
       <img
@@ -39,10 +38,14 @@
     <div class="px-4">
       <div class="bg-white rounded-2xl shadow-sm p-4 flex items-center space-x-4">
         <div class="bg-gray-100 rounded-full p-2">
-          <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" class="h-6 w-6" />
+          <img
+            src="https://www.paypalobjects.com/webstatic/icon/pp258.png"
+            alt="PayPal"
+            class="h-6 w-6"
+          />
         </div>
         <div>
-          <p class="text-xl font-bold">US$0.13</p>
+          <p class="text-xl font-bold paypal-dollar">US$0.13</p>
           <p class="text-gray-500 text-sm">PayPal balance</p>
         </div>
       </div>
@@ -59,7 +62,9 @@
             <p class="text-gray-500 text-sm">For the things you love.</p>
           </div>
         </div>
-        <a href="#" class="text-blue-600 text-sm font-medium mt-2 block">Send now</a>
+        <a href="#" class="text-blue-600 text-sm font-medium mt-2 block"
+          >Send now</a
+        >
       </div>
     </div>
 
@@ -69,7 +74,9 @@
         <!-- Item 1 -->
         <div class="flex items-center justify-between p-4">
           <div class="flex space-x-3">
-            <div class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white">
+            <div
+              class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white text-lg"
+            >
               <i class="fas fa-store"></i>
             </div>
             <div>
@@ -78,13 +85,15 @@
               <p class="text-gray-500 text-sm">Payment</p>
             </div>
           </div>
-          <p class="text-black font-semibold">-US$1</p>
+          <p class="text-black font-semibold paypal-dollar">-US$1</p>
         </div>
 
         <!-- Item 2 -->
         <div class="flex items-center justify-between p-4">
           <div class="flex space-x-3">
-            <div class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white">
+            <div
+              class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white text-lg"
+            >
               <i class="fas fa-store"></i>
             </div>
             <div>
@@ -93,13 +102,15 @@
               <p class="text-gray-500 text-sm">Payment received</p>
             </div>
           </div>
-          <p class="text-green-600 font-semibold">+US$1.13</p>
+          <p class="text-green-600 font-semibold paypal-dollar">+US$1.13</p>
         </div>
 
         <!-- Item 3 -->
         <div class="flex items-center justify-between p-4">
           <div class="flex space-x-3">
-            <div class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white">
+            <div
+              class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white text-lg"
+            >
               <i class="fas fa-store"></i>
             </div>
             <div>
@@ -108,37 +119,41 @@
               <p class="text-gray-500 text-sm">Payment</p>
             </div>
           </div>
-          <p class="text-black font-semibold">-US$1.49</p>
+          <p class="text-black font-semibold paypal-dollar">-US$1.49</p>
         </div>
       </div>
     </div>
 
     <!-- Send & Request Buttons -->
     <div class="px-4 mt-6 flex justify-between">
-      <button class="w-[48%] bg-black text-white text-lg font-semibold rounded-full py-3">Send</button>
-      <button class="w-[48%] bg-black text-white text-lg font-semibold rounded-full py-3">Request</button>
+      <button
+        class="w-[48%] bg-black text-white text-lg font-semibold rounded-full py-3"
+      >
+        Send
+      </button>
+      <button
+        class="w-[48%] bg-black text-white text-lg font-semibold rounded-full py-3"
+      >
+        Request
+      </button>
     </div>
 
     <!-- Bottom Navigation -->
-    <div class="fixed bottom-0 w-full bg-white border-t px-4 py-2 flex justify-between text-sm text-gray-600">
+    <div
+      class="fixed bottom-0 w-full bg-white border-t px-4 py-2 flex justify-between text-sm text-gray-800"
+    >
       <div class="flex flex-col items-center text-black">
         <i class="fas fa-home text-xl"></i>
         <span class="text-xs font-semibold mt-1">Home</span>
       </div>
       <div class="flex flex-col items-center">
-        <i class="fas fa-dollar-sign text-xl"></i>
-        <span class="text-xs mt-1">Payments</span>
+        <i class="fas fa-money-bill-wave text-xl"></i>
+        <span class="text-xs font-semibold mt-1">Payments</span>
       </div>
       <div class="flex flex-col items-center">
         <i class="fas fa-wallet text-xl"></i>
-        <span class="text-xs mt-1">Wallet</span>
+        <span class="text-xs font-semibold mt-1">Wallet</span>
       </div>
     </div>
-
-    <!-- FontAwesome for icons -->
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
