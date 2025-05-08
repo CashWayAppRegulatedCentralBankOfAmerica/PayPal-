@@ -43,28 +43,28 @@
     </div>
   </div>
   
- <!-- Transactions -->
+  <!-- Transactions -->
 <div class="mt-6 space-y-3 px-4">
-<!-- Example: Transaction with "Payment" (fixed layout like the others) -->
-<div class="bg-white rounded-xl px-4 py-5 flex items-center justify-between">
-  <div class="flex items-start space-x-0">
-    <!-- Icon and label below it -->
-    <div class="flex flex-col items-start mr-[-10px]">
-      <img src="IMG-20250503-WA0015.jpg" class="h-10 w-10 rounded-full" />
-      <p class="text-[10px] text-gray-500 mt-4">Payment</p>
+  <!-- Transaction 1 -->
+  <div class="bg-white rounded-xl px-4 py-5 flex items-center justify-between">
+    <div class="flex items-start space-x-0">
+      <!-- Icon and label below it -->
+      <div class="flex flex-col items-start mr-[-10px]"> <!-- Pulled image left -->
+        <img src="IMG-20250503-WA0015.jpg" class="h-10 w-10 rounded-full" />
+        <p class="text-[10px] text-gray-500 mt-4">Payment received</p>
+      </div>
+
+      <!-- Name and date aligned to image -->
+      <div class="flex flex-col justify-center mr-[0]"> <!-- Pulled name and date left -->
+        <p class="text-sm font-semibold">John Doe</p>
+        <p class="text-xs text-gray-500">27 Apr</p>
+      </div>
     </div>
 
-    <!-- Name and date aligned to image -->
-    <div class="flex flex-col justify-center mr-[0]">
-      <p class="text-sm font-semibold">John Doe</p>
-      <p class="text-xs text-gray-500">27 Apr</p>
-    </div>
+    <!-- Amount -->
+    <p class="font-bold text-sm">-US$5</p>
   </div>
-
-  <!-- Amount -->
-  <p class="font-bold text-sm">-US$5</p>
 </div>
-
 
 <div class="mt-6 space-y-3 px-4">
   <!-- Transaction 2 -->
@@ -84,7 +84,7 @@
     </div>
 
     <!-- Amount -->
-    <p class="text-sm font-semibold text-green-600">+US$8</p>
+    <p class="font-bold text-sm">-US$8</p>
   </div>
 </div>
 
@@ -95,7 +95,7 @@
       <!-- Icon and label below it -->
       <div class="flex flex-col items-start mr-[-10px]"> <!-- Pulled image left -->
         <img src="IMG-20250503-WA0015.jpg" class="h-10 w-10 rounded-full" />
-        <p class="text-[10px] text-gray-500 mt-4">Payment</p>
+        <p class="text-[10px] text-gray-500 mt-4">Payment received</p>
       </div>
 
       <!-- Name and date aligned to image -->
@@ -117,7 +117,7 @@
       <!-- Icon and label below it -->
       <div class="flex flex-col items-start mr-[-10px]"> <!-- Pulled image left -->
         <img src="IMG-20250503-WA0015.jpg" class="h-10 w-10 rounded-full" />
-        <p class="text-[10px] text-gray-500 mt-4">Money received</p>
+        <p class="text-[10px] text-gray-500 mt-4">Payment received</p>
       </div>
 
       <!-- Name and date aligned to image -->
@@ -128,7 +128,7 @@
     </div>
 
     <!-- Amount -->
-    <p class="text-sm font-semibold text-green-600">+US$20</p>
+    <p class="font-bold text-sm">-US$20</p>
   </div>
 </div>
 
@@ -139,7 +139,7 @@
       <!-- Icon and label below it -->
       <div class="flex flex-col items-start mr-[-10px]"> <!-- Pulled image left -->
         <img src="IMG-20250503-WA0015.jpg" class="h-10 w-10 rounded-full" />
-        <p class="text-[10px] text-gray-500 mt-4">Payment</p>
+        <p class="text-[10px] text-gray-500 mt-4">Payment received</p>
       </div>
 
       <!-- Name and date aligned to image -->
@@ -172,7 +172,7 @@
     </div>
 
     <!-- Amount -->
-    <p class="text-sm font-semibold text-green-600">+US$18</p>
+    <p class="font-bold text-sm">-US$18</p>
   </div>
 </div>
 
@@ -183,7 +183,7 @@
       <!-- Icon and label below it -->
       <div class="flex flex-col items-start mr-[-10px]"> <!-- Pulled image left -->
         <img src="IMG-20250503-WA0015.jpg" class="h-10 w-10 rounded-full" />
-        <p class="text-[10px] text-gray-500 mt-4">Payment</p>
+        <p class="text-[10px] text-gray-500 mt-4">Payment received</p>
       </div>
 
       <!-- Name and date aligned to image -->
@@ -205,7 +205,7 @@
       <!-- Icon and label below it -->
       <div class="flex flex-col items-start mr-[-10px]"> <!-- Pulled image left -->
         <img src="IMG-20250503-WA0015.jpg" class="h-10 w-10 rounded-full" />
-        <p class="text-[10px] text-gray-500 mt-4">Money received</p>
+        <p class="text-[10px] text-gray-500 mt-4">Payment received</p>
       </div>
 
       <!-- Name and date aligned to image -->
@@ -216,7 +216,7 @@
     </div>
 
     <!-- Amount -->
-    <p class="text-sm font-semibold text-green-600">+US$30</p>
+    <p class="font-bold text-sm">-US$30</p>
   </div>
 </div>
 
@@ -227,7 +227,7 @@
       <!-- Icon and label below it -->
       <div class="flex flex-col items-start mr-[-10px]"> <!-- Pulled image left -->
         <img src="IMG-20250503-WA0015.jpg" class="h-10 w-10 rounded-full" />
-        <p class="text-[10px] text-gray-500 mt-4">Payment</p>
+        <p class="text-[10px] text-gray-500 mt-4">Payment received</p>
       </div>
 
       <!-- Name and date aligned to image -->
@@ -241,6 +241,10 @@
     <p class="font-bold text-sm">-US$35</p>
   </div>
 </div>
+
+<!-- Repeat for more transactions with different names and amounts -->
+
+
 
   <!-- Bottom Navigation -->
   <nav class="fixed bottom-0 left-0 w-full max-w-md mx-auto bg-white border-t px-4 py-3 flex flex-col space-y-3 z-50">
