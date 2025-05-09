@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam Instructions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: #0078D4;
+      margin-bottom: 20px;
+    }
+    .instructions {
+      max-width: 800px;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .instructions ul {
+      padding-left: 20px;
+    }
+    .instructions li {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 12px 24px;
+      background: #0078D4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Online Exam Instructions</h1>
+
+  <div class="instructions">
+    <p>Please read the following rules carefully before proceeding to the exam:</p>
+    <ul>
+      <li>You must enter your full name before starting the exam.</li>
+      <li>Your webcam will be turned on for the duration of the exam.</li>
+      <li>Switching tabs or minimizing the window will disqualify you immediately.</li>
+      <li>You have exactly 1 hour to complete your essay response.</li>
+      <li>Once time runs out or you submit, your answer will be automatically saved.</li>
+      <li>This exam is being monitored for integrity and fairness.</li>
+    </ul>
+    <p>Click the button below when you are ready to begin.</p>
+  </div>
+
+  <button onclick="startExam()">I Understand and Agree — Login to Start Exam</button>
+
+  <script>
+    function startExam() {
+      window.location.href = "login.html"; // Replace with actual exam page
+    }
+  </script>
+
+</body>
+</html

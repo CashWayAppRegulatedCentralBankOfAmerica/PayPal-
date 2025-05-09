@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Online Exam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    #examContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      padding: 20px;
+      height: 100%;
+    }
+    #timer {
+      font-size: 20px;
+      font-weight: bold;
+      color: red;
+      margin: 10px;
+    }
+    #question {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    #name {
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 500px;
+    }
+    #answer {
+      flex-grow: 1;
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      resize: none;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      max-width: 800px;
+      height: 50vh;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    video {
+      width: 200px;
+      border: 2px solid #000;
+      margin: 15px auto;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 90%;
+    }
+    .modal-content button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="examContainer">
+  <div id="timer">Loading Timer...</div>
+  <input type="text" id="name" placeholder="Enter your full name" required>
+  <div id="question">
+    <strong>Essay Question:</strong>  
+    <p>Discuss the role of county governments in delivering essential services to local communities.</p>
+  </div>
+  <textarea id="answer" placeholder="Type your full response here..." required></textarea>
+  <button onclick="submitAnswer()">Submit Exam</button>
+  <video id="video" autoplay muted></video>
+</div>
+
+<!-- Modal Popup -->
+<div id="modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <p id="modalMessage">Placeholder</p>
+    <button onclick="closeModal()">OK</button>
+  </div>
+</div>
+
+<script>
+  const formURL = "YOUR_WEB_APP_URL_HERE"; // Replace with actual submission endpoint
+  const modal = document.getElementById("modal");
+  const modalMsg = document.getElementById("modalMessage");
+  const examContainer = document.getElementById("examContainer");
+  const submitBtn = document.querySelector("button");
+
+  let userToken = localStorage.getItem("userToken");
+  if (!userToken) {
+    userToken = crypto.randomUUID();
+    localStorage.setItem("userToken", userToken);
+  }
+
+  const hasSubmitted = localStorage.getItem("submitted") === "true";
+  if (hasSubmitted) {
+    examContainer.style.display = "none";
+    showModal("You do not have access. You have already submitted the exam.");
+  }
+
+  function showModal(message) {
+    modalMsg.textContent = message;
+    modal.style.display = "flex";
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+    if (localStorage.getItem("submitted") === "true") {
+      examContainer.style.display = "none";
+      showModal("You do not have access. You have already submitted the exam.");
+    }
+  }
+
+  function initExamSecurity() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        document.getElementById("video").srcObject = stream;
+      })
+      .catch(() => {
+        banUser("Camera access is required to proceed with the exam.");
+      });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        banUser("You switched tabs. Exam session terminated.");
+      }
+    });
+
+    let timeLeft = 60 * 60;
+    const timerDisplay = document.getElementById("timer");
+
+    const timerInterval = setInterval(() => {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      timerDisplay.textContent = `Time Left: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        autoSubmit();
+      }
+      timeLeft--;
+    }, 1000);
+  }
+
+  function banUser(reason) {
+    localStorage.setItem("submitted", "true");
+    examContainer.style.display = "none";
+    showModal(reason);
+  }
+
+  function submitAnswer() {
+    const name = document.getElementById("name").value.trim();
+    const answer = document.getElementById("answer").value.trim();
+
+    if (!name || !answer) {
+      showModal("Please provide your name and answer before submitting.");
+      return;
+    }
+
+    submitBtn.disabled = true;
+
+    fetch(formURL, {
+      method: "POST",
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `token=${encodeURIComponent(userToken)}&name=${encodeURIComponent(name)}&answer=${encodeURIComponent(answer)}`
+    }).then(() => {
+      localStorage.setItem("submitted", "true");
+      showModal("Your answer has been submitted successfully.");
+    }).catch(() => {
+      showModal("Submission failed. Please check your internet connection.");
+      submitBtn.disabled = false;
+    });
+  }
+
+  function autoSubmit() {
+    const name = document.getElementById("name").value.trim();
+    const answer = document.getElementById("answer").value.trim();
+
+    if (!name || !answer || localStorage.getItem("submitted") === "true") {
+      return;
+    }
+
+    fetch(formURL, {
+      method: "POST",
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `token=${encodeURIComponent(userToken)}&name=${encodeURIComponent(name)}&answer=${encodeURIComponent(answer)}`
+    }).finally(() => {
+      localStorage.setItem("submitted", "true");
+      showModal("Time is up. Your exam has been submitted automatically.");
+    });
+  }
+
+  initExamSecurity();
+</script>
+
+</body>
+</html>

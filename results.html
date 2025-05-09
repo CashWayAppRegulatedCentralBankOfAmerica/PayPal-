@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #0078D4;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      display: none;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #0078D4;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .pass {
+      color: green;
+      font-weight: bold;
+    }
+    .fail {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: block;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 30px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .modal-content h2 {
+      color: #0078D4;
+    }
+
+    .modal-content p {
+      margin: 20px 0;
+    }
+
+    .modal-content button {
+      padding: 10px 20px;
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .modal-content button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Disclaimer Modal -->
+<div id="disclaimerModal" class="modal">
+  <div class="modal-content">
+    <h2>Important Examination Disclaimer</h2>
+    <p>This exam was marked with the highest level of fairness and transparency. Candidates who passed with a score of 51% and above will receive an email and be deployed to their respective work duty stations.</p>
+    <p>Deployment starts on <strong>10th May 2025</strong>. All other candidates are encouraged to try again next time.</p>
+    <button onclick="acknowledgeDisclaimer()">OK</button>
+  </div>
+</div>
+
+<h1>National Online Exam Results</h1>
+
+<table id="resultsTable">
+  <tr>
+    <th>#</th>
+    <th>Full Name</th>
+    <th>ID Number</th>
+    <th>Score</th>
+    <th>Result</th>
+  </tr>
+  <!-- Passed Candidates (8) -->
+  <tr><td>1</td><td>Anna Wambui</td><td>******11</td><td>85</td><td class="pass">Pass</td></tr>
+  <tr><td>2</td><td>David Kamau</td><td>******22</td><td>76</td><td class="pass">Pass</td></tr>
+  <tr><td>3</td><td>Grace Wanjiku</td><td>******12</td><td>88</td><td class="pass">Pass</td></tr>
+  <tr><td>4</td><td>John Otieno</td><td>******42</td><td>72</td><td class="pass">Pass</td></tr>
+  <tr><td>5</td><td>Lucy Njeri</td><td>******31</td><td>70</td><td class="pass">Pass</td></tr>
+  <tr><td>6</td><td>Mary Mutiso</td><td>******15</td><td>90</td><td class="pass">Pass</td></tr>
+  <tr><td>7</td><td>Peter Mwangi</td><td>******18</td><td>78</td><td class="pass">Pass</td></tr>
+  <tr><td>8</td><td>Samuel Cheruiyot</td><td>******34</td><td>65</td><td class="pass">Pass</td></tr>
+
+  <!-- Failed Candidates (34) -->
+  <tr><td>9</td><td>Abigail Wairimu</td><td>******64</td><td>45</td><td class="fail">Fail</td></tr>
+  <tr><td>10</td><td>Benjamin Kamau</td><td>******56</td><td>49</td><td class="fail">Fail</td></tr>
+  <tr><td>11</td><td>Charles Otieno</td><td>******21</td><td>38</td><td class="fail">Fail</td></tr>
+  <tr><td>12</td><td>Daniel Kihara</td><td>******55</td><td>41</td><td class="fail">Fail</td></tr>
+  <tr><td>13</td><td>Eva Njeri</td><td>******43</td><td>48</td><td class="fail">Fail</td></tr>
+  <tr><td>14</td><td>Faith Njeri</td><td>******22</td><td>42</td><td class="fail">Fail</td></tr>
+  <tr><td>15</td><td>Grace Mutiso</td><td>******19</td><td>34</td><td class="fail">Fail</td></tr>
+  <tr><td>16</td><td>James Mwangi</td><td>******76</td><td>40</td><td class="fail">Fail</td></tr>
+  <tr><td>17</td><td>Joseph Kiprotich</td><td>******67</td><td>44</td><td class="fail">Fail</td></tr>
+  <tr><td>18</td><td>Josephine Otieno</td><td>******33</td><td>39</td><td class="fail">Fail</td></tr>
+  <tr><td>19</td><td>Katherine Mutiso</td><td>******81</td><td>50</td><td class="fail">Fail</td></tr>
+  <tr><td>20</td><td>Kevin Mwangi</td><td>******34</td><td>28</td><td class="fail">Fail</td></tr>
+  <tr><td>21</td><td>Linda Wambui</td><td>******12</td><td>35</td><td class="fail">Fail</td></tr>
+  <tr><td>22</td><td>Michael Ochieng</td><td>******87</td><td>29</td><td class="fail">Fail</td></tr>
+  <tr><td>23</td><td>Monica Njoki</td><td>******91</td><td>30</td><td class="fail">Fail</td></tr>
+  <tr><td>24</td><td>Naomi Kamau</td><td>******56</td><td>41</td><td class="fail">Fail</td></tr>
+  <tr><td>25</td><td>Patrick Otieno</td><td>******33</td><td>36</td><td class="fail">Fail</td></tr>
+  <tr><td>26</td><td>Pauline Wambui</td><td>******67</td><td>42</td><td class="fail">Fail</td></tr>
+  <tr><td>27</td><td>Phyllis Njeri</td><td>******89</td><td>39</td><td class="fail">Fail</td></tr>
+  <tr><td>28</td><td>Ruth Wanjiku</td><td>******72</td><td>44</td><td class="fail">Fail</td></tr>
+  <tr><td>29</td><td>Samuel Wambua</td><td>******19</td><td>46</td><td class="fail">Fail</td></tr>
+  <tr><td>30</td><td>Sharon Njeri</td><td>******41</td><td>47</td><td class="fail">Fail</td></tr>
+  <tr><td>31</td><td>Stephen Kamau</td><td>******28</td><td>50</td><td class="fail">Fail</td></tr>
+  <tr><td>32</td><td>Teresa Wanjiku</td><td>******92</td><td>33</td><td class="fail">Fail</td></tr>
+  <tr><td>33</td><td>Thomas Mwangi</td><td>******77</td><td>32</td><td class="fail">Fail</td></tr>
+  <tr><td>34</td><td>Victoria Otieno</td><td>******22</td><td>37</td><td class="fail">Fail</td></tr>
+</table>
+
+<script>
+  // Function to hide the disclaimer modal and show the results table
+  function acknowledgeDisclaimer() {
+    document.getElementById('disclaimerModal').style.display = 'none';
+    document.getElementById('resultsTable').style.display = 'table';
+  }
+
+  // Show the disclaimer modal when the page loads
+  window.onload = function() {
+    document.getElementById('disclaimerModal').style.display = 'flex';
+  };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter Exam Code</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f4f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 350px;
+      width: 90%;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0078D4;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #0078D4;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    .spinner {
+      margin-top: 15px;
+      display: none;
+      width: 30px;
+      height: 30px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #0078D4;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">ENTER EXAM CODE</div>
+    <input type="text" id="examCode" placeholder="Enter exam code">
+    <button onclick="validateCode()">Submit</button>
+    <div class="spinner" id="spinner"></div>
+  </div>
+
+  <script>
+    function validateCode() {
+      const code = document.getElementById('examCode').value.trim();
+      const spinner = document.getElementById('spinner');
+
+      if (code === "05047") {
+        spinner.style.display = 'block';
+        setTimeout(() => {
+          window.location.href = 'results.html';
+        }, 1000);
+      } else {
+        alert("Invalid exam code. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html
