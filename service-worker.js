@@ -5,6 +5,8 @@ const IMAGE_URLS = [
   'ChatGPT Image May 9, 2025, 02_30_28 PM.png',
   'https://www.paypalobjects.com/webstatic/icon/pp258.png',
   'InShot_20250509_153055158.jpg',
+  'paypal_192.jpg',
+  'paypal_512.jpg',
 ];
 
 // Install the service worker and cache images
