@@ -1,11 +1,6 @@
 const CACHE_NAME = 'transaction-images-cache-v1';
 const IMAGE_URLS = [
   'index.html',
-  'login.html',
-  'exam.html',
-  'instructions.html',
-  'results.html',
-  'instructions (1).html',
   'manifest.json',
   'IMG-20250509-WA0011.jpg',
   'ChatGPT Image May 9, 2025, 03_05_18 PM.png',
