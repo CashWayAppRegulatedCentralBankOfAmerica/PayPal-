@@ -33,9 +33,7 @@
     </div>
   </div>
   
-
 <!-- Send Payments -->
-
 <div class="p-4 bg-gray-100">
   <h2 class="text-lg font-semibold mb-4">Send again</h2>
   <div class="flex space-x-7">
@@ -48,20 +46,17 @@
   <span class="mt-2 text-sm font-medium">AMAITSA GLOBAL</span>
 </div>
 
-    <!-- Search -->
+<!-- Search -->
     <div class="flex flex-col items-center">
       <div class="bg-black rounded-full w-14 h-14 flex items-center justify-center">
         <img src="ChatGPT Image May 9, 2025, 02_30_28 PM.png" alt="Search" class="w-14 h-14 rounded-full" />
       </div>
       <span class="mt-2 text-sm font-medium">Search</span>
     </div>
-
-  </div>
-
+</div>
 </div>
 
 <!-- Transactions -->
-
 <div class="mt-6 space-y-3 px-4">
   <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
     <div class="flex justify-between">
@@ -153,7 +148,6 @@
 </div>
 
   <!-- Transactions -->
-
 <div class="mt-6 space-y-3 px-4">
   <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
     <div class="flex justify-between">
@@ -221,7 +215,6 @@
 </div>
 
 <!-- Continue appending remaining transactions here up to 20 total -->
-
 <div class="mt-6 space-y-3 px-4">
   <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
     <div class="flex flex-col">
@@ -243,6 +236,7 @@
     </div>
   </div>
 </div>
+
 <!-- Transactions -->
 <div class="mt-6 space-y-3 px-4">
   <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
@@ -310,8 +304,7 @@
   </div>
 </div>
 
-  <!-- Transactions -->
-
+<!-- Transactions -->
 <div class="mt-6 space-y-3 px-4">
   <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
     <div class="flex justify-between">
@@ -357,7 +350,6 @@
 </div>
 
 <!-- Continue appending remaining transactions here up to 20 total -->
-
 <div class="mt-6 space-y-3 px-4">
   <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
     <div class="flex flex-col">
@@ -381,7 +373,6 @@
 </div>
 
 <!-- Previous 14 transactions here -->
-
 <div class="mt-6 space-y-3 px-4">
   <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
     <div class="flex flex-col">
@@ -581,8 +572,7 @@
 </div>
 
 <!-- Bottom Navigation -->
-
-  <nav class="fixed bottom-0 left-0 w-full max-w-md mx-auto bg-white border-t px-4 py-3 flex flex-col space-y-3 z-50">
+<nav class="fixed bottom-0 left-0 w-full max-w-md mx-auto bg-white border-t px-4 py-3 flex flex-col space-y-3 z-50">
     <!-- Buttons First -->
       <!-- Send & Request Buttons -->
   <div class="mt-4 px-4 flex justify-between">
@@ -606,6 +596,16 @@
       </a>
     </div>
   </nav>
-
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            }).catch((error) => {
+                console.log('Service Worker registration failed:', error);
+            });
+        });
+    }
+</script>
 </body>
 </html>
