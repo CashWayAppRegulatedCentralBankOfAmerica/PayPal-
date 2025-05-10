@@ -2,20 +2,20 @@
   "name": "PayPal",
   "short_name": "PayPal",
   "description": "A PayPal app to display transaction lists with images and dates.",
-  "start_url": ".",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
   "icons": [
     {
-      "src": "paypal_192.jpg",
+      "src": "paypal_192.png",
       "sizes": "192x192",
-      "type": "image/jpg"
+      "type": "image/png"
     },
     {
-      "src": "paypal_512.jpg",
+      "src": "paypal_512.png",
       "sizes": "512x512",
-      "type": "image/jpg"
+      "type": "image/png"
     }
   ],
   "scope": "/"
