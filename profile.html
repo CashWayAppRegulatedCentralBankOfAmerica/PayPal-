@@ -24,23 +24,21 @@
 
   <!-- Profile Card -->
 <div class="bg-white rounded-2xl mx-4 overflow-hidden shadow-md">
-  <!-- Top Banner -->
-  <div class="h-32 bg-gradient-to-r from-fuchsia-800 to-pink-600 relative rounded-t-2xl">
-    <!-- Add background pattern or image if needed -->
-  </div>
+  <!-- Header Banner -->
+  <div class="h-32 bg-gradient-to-r from-fuchsia-800 to-pink-600 rounded-t-2xl"></div>
 
-  <!-- Profile Image Container -->
+  <!-- Profile Image Section -->
   <div class="relative -mt-14 flex flex-col items-center pb-6">
     <div class="w-24 h-24 rounded-full border-4 border-white overflow-hidden relative">
+      <!-- Profile Image -->
       <img src="IMG-20250509-WA0011.jpg" alt="Profile" class="w-full h-full object-cover object-top">
 
-      <!-- Pink Fade Overlay on Bottom Half -->
-      <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-[#931C50] opacity-80"></div>
-
-      <!-- Camera Icon in Maroon Circle -->
-      <div class="absolute bottom-1/2 left-1/2 transform translate-x-[-50%] translate-y-[50%] w-10 h-10 bg-[#931C50] rounded-full flex items-center justify-center">
-        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 5c-1.1 0-2 .9-2 2H8l-1.41 1.41C6.21 8.79 6 9.3 6 9.83V18c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9.83c0-.53-.21-1.04-.59-1.42L16 7h-2c0-1.1-.9-2-2-2zm0 3a4 4 0 110 8 4 4 0 010-8z"/>
+      <!-- Bottom 1/3 Fade -->
+      <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-[#931C50] opacity-80 flex items-center justify-center">
+        <!-- White Transparent Camera Icon -->
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 9a3 3 0 100 6 3 3 0 000-6z" />
+          <path d="M2 7h4l2-3h8l2 3h4v12H2V7z" />
         </svg>
       </div>
     </div>
