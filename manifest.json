@@ -4,8 +4,8 @@
   "description": "A PayPal app to display transaction lists with images and dates.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "169BD7",
-  "theme_color": "169BD7",
+  "background_color": "#169BD7",
+  "theme_color": "#169BD7",
   "icons": [
     {
       "src": "icon_192.png",
