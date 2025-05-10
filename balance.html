@@ -1,75 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PayPal Balance</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .balance-bar-fill {
-      transition: width 0.4s ease-in-out;
-    }
-  </style>
-</head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-  <div class="max-w-md mx-auto p-4">
-    <!-- Header -->
-    <div class="flex items-center mb-6">
-      <button class="text-2xl">&larr;</button>
-      <h1 class="text-xl font-semibold text-center flex-grow -ml-6">PayPal balance</h1>
-    </div>
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
-    <!-- Balance Box -->
-    <div class="px-4 mt-4">
-      <div class="max-w-[380px] mx-auto bg-white rounded-xl shadow p-6">
-        <div class="flex items-center space-x-2 mb-4">
-          <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" class="w-6 h-6">
-          <span class="text-sm font-medium">PayPal balance</span>
-        </div>
-
-        <!-- Balance Bar -->
-        <div class="w-full bg-gray-200 h-6 rounded-lg overflow-hidden mb-6">
-          <div class="balance-bar-fill bg-black h-full rounded-lg w-[50%]"></div>
-        </div>
-
-        <p class="text-3xl font-extrabold">US$0.13</p>
-      </div>
-    </div>
-
-    <!-- Transfer Button -->
-    <div class="px-4 mt-6 mb-6">
-      <button class="w-full bg-black text-white py-3 rounded-full font-semibold text-lg">Transfer</button>
-    </div>
-
-    <!-- Recent Activity -->
-    <h2 class="text-lg font-semibold mb-4 px-4">Recent activity</h2>
-    <div class="space-y-4 px-4">
-      <!-- Example Transaction -->
-      <div class="bg-white rounded-xl px-4 py-5 shadow max-w-[380px] mx-auto">
-        <div class="flex justify-between">
-          <div class="flex">
-            <img class="h-10 w-10 rounded-full mr-3" src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" />
-            <div class="flex flex-col justify-center">
-              <p class="text-sm font-semibold">THUNES</p>
-              <p class="text-xs text-gray-500">19 Apr</p>
-            </div>
+export default function Component() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+      <Card className="w-full">
+        <CardContent className="p-6">
+          <h2 className="text-xl font-semibold mb-4">Account Overview</h2>
+          <div className="mb-4">
+            <Label className="text-sm text-gray-500">Balance</Label>
+            <div className="text-2xl font-bold">$12,345.67</div>
           </div>
-        </div>
-        <div class="flex justify-between items-center mt-4">
-          <p class="text-[10px] text-gray-500">Payment</p>
-          <p class="font-bold text-sm">-US$1640.20</p>
-        </div>
-      </div>
+          <div className="h-2 bg-gray-200 rounded-lg mb-6"></div> {/* Clean bar with spacing below */}
 
-      <!-- Add other transactions below the same way -->
+          <div className="space-y-2">
+            <Label htmlFor="amount">Transfer Amount</Label>
+            <Input id="amount" placeholder="$0.00" type="number" />
+            <Button className="w-full mt-2">Transfer</Button>
+          </div>
+        </CardContent>
+      </Card>
     </div>
-  </div>
-
-  <script>
-    // Animate balance bar fill
-    setTimeout(() => {
-      document.querySelector('.balance-bar-fill').style.width = '80%';
-    }, 1000);
-  </script>
-</body>
-</html>
+  );
+}
