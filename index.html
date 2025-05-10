@@ -43,8 +43,17 @@
     <div>
       <p class="text-[22px] font-bold">US$0.13</p>
       <p class="text-gray-500 text-sm">PayPal balance</p>
-    </div>
-  </div>
+      </
+  onclick="delayedRedirect()"
+  />
+</div>
+<script>
+  function delayedRedirect() {
+    setTimeout(() => {
+      window.location.href = 'profile.html';
+    }, 1000); // 1 seconds delay
+  }
+</script>
   
 <!-- Send Payments -->
 <div class="p-4 bg-gray-100">
