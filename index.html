@@ -17,10 +17,23 @@
 </head>
 <body class="pb-40 max-w-md mx-auto">
 
-  <!-- Top Profile -->
-  <div class="px-4 pt-4">
-    <img src="IMG-20250509-WA0011.jpg" alt="Profile" class="h-10 w-10 rounded-full" />
-  </div>
+<!-- Top Profile -->
+<div class="px-4 pt-4">
+  <img
+    src="IMG-20250509-WA0011.jpg"
+    alt="Profile"
+    class="h-10 w-10 rounded-full object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+    onclick="delayedRedirect()"
+  />
+</div>
+
+<script>
+  function delayedRedirect() {
+    setTimeout(() => {
+      window.location.href = 'profile.html';
+    }, 2000); // 2 seconds delay
+  }
+</script>
 
   <!-- Balance Bar -->
   <div class="mt-4 mx-4 bg-white rounded-2xl p-4 shadow flex items-center space-x-4">
