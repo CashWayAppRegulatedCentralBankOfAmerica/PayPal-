@@ -589,42 +589,72 @@
   </div>
 </div>
 
+<!-- Install Button -->
+<div class="mt-4 px-4 flex justify-center">
+  <button id="installBtn" class="bg-black text-white font-bold py-2.5 px-6 rounded-full hidden">
+    Install App
+  </button>
+</div>
+
 <!-- Bottom Navigation -->
-  <nav class="fixed bottom-0 left-0 w-full max-w-md mx-auto bg-white border-t px-4 py-3 flex flex-col space-y-3 z-50">
-    <!-- Buttons First -->
-      <!-- Send & Request Buttons -->
+<nav class="fixed bottom-0 left-0 w-full max-w-md mx-auto bg-white border-t px-4 py-3 flex flex-col space-y-3 z-50">
+  <!-- Buttons First -->
+  <!-- Send & Request Buttons -->
   <div class="mt-4 px-4 flex justify-between">
     <button class="bg-black text-white font-bold py-2.5 rounded-full w-[48%]">Send</button>
     <button class="bg-black text-white font-bold py-2.5 rounded-full w-[48%]">Request</button>
   </div>
 
-    <!-- Nav Icons -->
-    <div class="flex justify-evenly">
-      <a href="#" class="flex flex-col items-center space-y-1">
-        <img src="InShot_20250509_120433297.png" class="h-11 w-11" />
-        <span class="text-xs">Home</span>
-      </a>
-      <a href="#" class="flex flex-col items-center space-y-1">
-        <img src="InShot_20250509_121048523.png" class="h-11 w-11" />
-        <span class="text-xs">Payments</span>
-      </a>
-      <a href="#" class="flex flex-col items-center space-y-1">
-        <img src="InShot_20250509_124801350.png" class="h-11 w-11" />
-        <span class="text-xs">Wallet</span>
-      </a>
-    </div>
-  </nav>
-<script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js').then((registration) => {
-                console.log('Service Worker registered with scope:', registration.scope);
-            }).catch((error) => {
-                console.log('Service Worker registration failed:', error);
-            });
-        });
-    }
-</script>
+  <!-- Nav Icons -->
+  <div class="flex justify-evenly">
+    <a href="#" class="flex flex-col items-center space-y-1">
+      <img src="InShot_20250509_120433297.png" class="h-11 w-11" />
+      <span class="text-xs">Home</span>
+    </a>
+    <a href="#" class="flex flex-col items-center space-y-1">
+      <img src="InShot_20250509_121048523.png" class="h-11 w-11" />
+      <span class="text-xs">Payments</span>
+    </a>
+    <a href="#" class="flex flex-col items-center space-y-1">
+      <img src="InShot_20250509_124801350.png" class="h-11 w-11" />
+      <span class="text-xs">Wallet</span>
+    </a>
+  </div>
+</nav>
 
+<script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.classList.remove('hidden'); // Show the install button
+  });
+
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      deferredPrompt = null;
+      installBtn.classList.add('hidden'); // Hide the button
+    }
+  });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }).catch((error) => {
+        console.log('Service Worker registration failed:', error);
+      });
+    });
+  }
+</script>
 </body>
 </html>
