@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayPal Balance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+  <div class="max-w-md mx-auto p-4">
+    <!-- Header -->
+    <div class="flex items-center mb-6">
+      <button class="text-2xl">&larr;</button>
+      <h1 class="text-xl font-semibold text-center flex-grow -ml-6">PayPal balance</h1>
+    </div>
+
+    <!-- Balance Card -->
+    <div class="bg-white rounded-xl shadow p-6 mb-4">
+      <div class="flex items-center space-x-2 mb-2">
+        <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" class="w-6 h-6">
+        <span class="text-sm font-medium">PayPal balance</span>
+      </div>
+      <p class="text-3xl font-bold">US$0.13</p>
+    </div>
+
+    <!-- Transfer Button -->
+    <button class="w-full bg-black text-white py-3 rounded-full font-semibold text-lg mb-6">Transfer</button>
+
+    <!-- Recent Activity -->
+    <h2 class="text-lg font-semibold mb-4">Recent activity</h2>
+    <div class="space-y-4">
+      <!-- Transaction 1 -->
+      <div class="bg-white rounded-xl p-4 shadow flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="bg-blue-600 p-2 rounded-full">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7"></path>
+              <path d="M16 3h-4a2 2 0 00-2 2v2h8V5a2 2 0 00-2-2z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="font-medium">PrankTexts.com</p>
+            <p class="text-sm text-gray-500">27 Apr • Payment</p>
+          </div>
+        </div>
+        <p class="text-red-600 font-semibold">-US$1</p>
+      </div>
+
+      <!-- Transaction 2 -->
+      <div class="bg-white rounded-xl p-4 shadow flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="bg-blue-600 p-2 rounded-full">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7"></path>
+              <path d="M16 3h-4a2 2 0 00-2 2v2h8V5a2 2 0 00-2-2z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="font-medium">THUNES</p>
+            <p class="text-sm text-gray-500">18 Apr • Payment</p>
+          </div>
+        </div>
+        <p class="text-red-600 font-semibold">-US$1.49</p>
+      </div>
+
+      <!-- Transaction 3 -->
+      <div class="bg-white rounded-xl p-4 shadow flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <img src="https://via.placeholder.com/40x40.png?text=T" alt="Tabitha" class="w-10 h-10 rounded-full">
+          <div>
+            <p class="font-medium">Tabitha Nelima</p>
+            <p class="text-sm text-gray-500">18 Apr • Money received</p>
+          </div>
+        </div>
+        <p class="text-green-600 font-semibold">+US$1.25</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
