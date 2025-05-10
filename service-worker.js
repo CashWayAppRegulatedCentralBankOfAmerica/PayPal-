@@ -1,7 +1,7 @@
 const CACHE_NAME = 'transaction-images-cache-v1';
-const IMAGE_URLS = [
+const ASSETS_TO_CACHE = [
   'index.html',
-  'balance.tml',
+  'balance.html',
   'profile.html',
   'IMG-20250509-WA0011.jpg',
   'ChatGPT Image May 9, 2025, 03_05_18 PM.png',
@@ -12,18 +12,18 @@ const IMAGE_URLS = [
   'paypal_512.jpg',
 ];
 
-// Install the service worker and cache images
+// Install the service worker and cache important assets
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(IMAGE_URLS))
+    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS_TO_CACHE))
   );
 });
 
-// Activate event to clean up old caches if needed
+// Activate: cleanup old caches
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(keys => 
+    caches.keys().then(keys =>
       Promise.all(
         keys.map(key => {
           if (key !== CACHE_NAME) {
@@ -35,13 +35,11 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch event to serve cached images
+// Fetch: serve from cache if available
 self.addEventListener('fetch', event => {
-  if (IMAGE_URLS.some(url => event.request.url.includes(url))) {
-    event.respondWith(
-      caches.match(event.request).then(response => {
-        return response || fetch(event.request);
-      })
-    );
-  }
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
+    })
+  );
 });
