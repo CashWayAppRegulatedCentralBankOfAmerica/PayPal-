@@ -14,16 +14,19 @@
       <h1 class="text-xl font-semibold text-center flex-grow -ml-6">PayPal balance</h1>
     </div>
 
-<!-- Updated Balance Card to Match Transaction Width -->
-<div class="px-4 mt-4">
-  <div class="max-w-[380px] mx-auto bg-white rounded-xl shadow p-6">
-    <div class="flex items-center space-x-2 mb-4">
-      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" class="w-6 h-6">
-      <span class="text-sm font-medium">PayPal balance</span>
+    <!-- Updated Balance Card to Match Transaction Width -->
+    <div class="px-4 mt-4">
+      <div class="max-w-[380px] mx-auto bg-white rounded-xl shadow p-6"> <!-- Same width as transactions -->
+        <div class="flex items-center space-x-2 mb-4">
+          <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" class="w-6 h-6">
+          <span class="text-sm font-medium">PayPal balance</span>
+        </div>
+        <p class="text-3xl font-extrabold">US$0.13</p>
+      </div>
     </div>
-    <p class="text-3xl font-extrabold">US$0.13</p>
-  </div>
-</div>
+
+    <!-- Space between balance and transfer button -->
+    <div class="mt-6"></div> <!-- Added space between bars -->
 
     <!-- Transfer Button -->
     <button class="w-full bg-black text-white py-3 rounded-full font-semibold text-lg mb-6">Transfer</button>
@@ -31,51 +34,47 @@
     <!-- Recent Activity -->
     <h2 class="text-lg font-semibold mb-4">Recent activity</h2>
     <div class="space-y-4">
-  <!-- Transaction 1 -->
-  <!-- Transactions -->
-<div class="mt-6 space-y-3 px-4">
-  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
-    <div class="flex justify-between">
-      <!-- Left side: image and name/date -->
-      <div class="flex">
-        <div class="flex flex-col items-start mr-4">
-          <img class="h-10 w-10 rounded-full" src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" />
-        </div>
-        <div class="flex flex-col justify-center">
-          <p class="text-sm font-semibold">THUNES</p>
-          <p class="text-xs text-gray-500">19 Apr</p>
-        </div>
-      </div>
-    </div>
-<!-- Bottom row: Payment label and amount on the same line -->
-    <div class="flex justify-between items-center mt-4">
-      <p class="text-[10px] text-gray-500">Payment</p>
-      <p class="font-bold text-sm">-US$1640.20</p>
-    </div>
-  </div>
-  </div>
-  
-<div class="mt-6 space-y-3 px-4">
-  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
-    <div class="flex flex-col">
-      <div class="flex justify-between items-start">
-        <div class="flex">
-          <div class="flex flex-col items-start mr-3">
-            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+      <!-- Transaction 1 -->
+      <div class="mt-6 space-y-3 px-4">
+        <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5"> <!-- Same width as balance card -->
+          <div class="flex justify-between">
+            <div class="flex">
+              <div class="flex flex-col items-start mr-4">
+                <img class="h-10 w-10 rounded-full" src="https://www.paypalobjects.com/webstatic/icon/pp258.png" />
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-sm font-semibold">THUNES</p>
+                <p class="text-xs text-gray-500">19 Apr</p>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-col justify-center">
-            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
-            <p class="text-xs text-gray-500">19 Apr</p>
+          <div class="flex justify-between items-center mt-4">
+            <p class="text-[10px] text-gray-500">Payment</p>
+            <p class="font-bold text-sm">-US$1640.20</p>
           </div>
         </div>
       </div>
-      <div class="flex justify-between items-center mt-4">
-        <p class="text-[10px] text-gray-500">Payment received</p>
-        <p class="text-sm font-semibold text-green-600">+US$1,221.96</p>
+
+      <!-- Transaction 2 -->
+      <div class="mt-6 space-y-3 px-4">
+        <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5"> <!-- Same width as balance card -->
+          <div class="flex justify-between">
+            <div class="flex">
+              <div class="flex flex-col items-start mr-4">
+                <img class="h-10 w-10 rounded-full" src="https://www.paypalobjects.com/webstatic/icon/pp258.png" />
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-sm font-semibold">PayPal</p>
+                <p class="text-xs text-gray-500">20 Apr</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <p class="text-[10px] text-gray-500">Payment</p>
+            <p class="font-bold text-sm">-US$320.00</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
 <div class="mt-6 space-y-3 px-4">
   <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
