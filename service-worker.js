@@ -8,8 +8,8 @@ const ASSETS_TO_CACHE = [
   'ChatGPT Image May 9, 2025, 02_30_28 PM.png',
   'https://www.paypalobjects.com/webstatic/icon/pp258.png',
   'InShot_20250509_153055158.jpg',
-  'paypal_192.jpg',
-  'paypal_512.jpg',
+  'icon_192.png',
+  'icon_512.png',
 ];
 
 // Install the service worker and cache important assets
