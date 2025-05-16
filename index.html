@@ -1,115 +1,639 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="theme-color" content="#f2f4fb" />
-  <link rel="icon" href="path/to/icon.png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="path/to/icon.png" sizes="192x192" />
-  <link rel="manifest" href="manifest.json" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PayPal Clone</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Helvetica', sans-serif;
-      background-color: #f2f4fb;
-    }
-  </style>
+  <meta charset="UTF-8" />
+<meta name="theme-color" content="#f2f4fb">  <!-- Adjust the color here -->
+<link rel="icon" href="path/to/icon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="path/to/icon.png" sizes="192x192" />
+<link rel="manifest" href="manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayPal Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      background-color: #f2f4fb;
+    }
+  </style>
 </head>
 <body class="pb-40 max-w-md mx-auto">
 
 <!-- Top Profile -->
 <div class="px-4 pt-4">
-  <img
-    src="IMG-20250509-WA0011.jpg"
-    alt="Profile"
-    class="h-10 w-10 rounded-full object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
-    onclick="delayedRedirect()"
-  />
+  <img
+    src="IMG-20250509-WA0011.jpg"
+    alt="Profile"
+    class="h-10 w-10 rounded-full object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+    onclick="delayedRedirect()"
+  />
 </div>
 
 <script>
-  function delayedRedirect() {
-    setTimeout(() => {
-      window.location.href = 'profile.html';
-    }, 1000);
-  }
+  function delayedRedirect() {
+    setTimeout(() => {
+      window.location.href = 'profile.html';
+    }, 1000); // 1 seconds delay
+  }
 </script>
 
-<!-- Balance Box -->
+<!-- Balance Box (No Hover/Click Effects) -->
 <div class="px-4 mt-4">
-  <a href="balance.html" class="block">
-    <div class="bg-white rounded-2xl p-4 shadow flex items-center space-x-4">
-      <div class="bg-[#e2e6ea] p-2 rounded-full flex items-center justify-center">
-        <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" class="h-4 w-4" />
-      </div>
-      <div>
-        <p class="text-[22px] font-bold leading-tight">US$3,684.13</p>
-        <p class="text-gray-500 text-sm">PayPal balance</p>
-      </div>
-    </div>
-  </a>
+  <a href="balance.html" class="block">
+    <div class="bg-white rounded-2xl p-4 shadow flex items-center space-x-4">
+      <div class="bg-[#e2e6ea] p-2 rounded-full flex items-center justify-center">
+        <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" class="h-4 w-4" />
+      </div>
+      <div>
+        <p class="text-[22px] font-bold leading-tight">US$3,684.13</p>
+        <p class="text-gray-500 text-sm">PayPal balance</p>
+      </div>
+    </div>
+  </a>
 </div>
-
+  
 <!-- Send Payments -->
 <div class="p-4 bg-gray-100">
-  <h2 class="text-lg font-semibold mb-4">Send again</h2>
-  <div class="flex space-x-7">
-    <div class="flex flex-col items-center">
-      <div class="-ml-12 w-14 h-14 flex items-center justify-center">
-        <img src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" class="w-14 h-14 rounded-full" />
-      </div>
-      <span class="mt-2 text-sm font-medium">AMAITSA GLOBAL</span>
-    </div>
-
-    <div class="flex flex-col items-center">
-      <div class="bg-black rounded-full w-14 h-14 flex items-center justify-center">
-        <img src="ChatGPT Image May 9, 2025, 02_30_28 PM.png" alt="Search" class="w-14 h-14 rounded-full" />
-      </div>
-      <span class="mt-2 text-sm font-medium">Search</span>
-    </div>
-  </div>
+  <h2 class="text-lg font-semibold mb-4">Send again</h2>
+  <div class="flex space-x-7">
+    
+    <!-- AMAITSA GLOBAL (image shifted left only) -->
+<div class="flex flex-col items-center">
+  <div class="-ml-12 w-14 h-14 flex items-center justify-center">
+    <img src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" class="w-14 h-14 rounded-full" />
+  </div>
+  <span class="mt-2 text-sm font-medium">AMAITSA GLOBAL</span>
 </div>
 
-<!-- Transactions List -->
-<div class="mt-6 px-4 space-y-3 max-w-[380px] mx-auto">
+    <!-- Search -->
+    <div class="flex flex-col items-center">
+      <div class="bg-black rounded-full w-14 h-14 flex items-center justify-center">
+        <img src="ChatGPT Image May 9, 2025, 02_30_28 PM.png" alt="Search" class="w-14 h-14 rounded-full" />
+      </div>
+      <span class="mt-2 text-sm font-medium">Search</span>
+    </div>
 
-  <!-- Transaction Item Template -->
-  <div class="bg-white rounded-xl px-4 py-5">
-    <div class="flex justify-between items-start">
-      <div class="flex items-center space-x-4">
-        <img class="h-10 w-10 rounded-full" src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" alt="THUNES" />
-        <div>
-          <p class="text-sm font-semibold">THUNES</p>
-          <p class="text-xs text-gray-500">7 May</p>
-        </div>
-      </div>
-    </div>
-    <div class="flex justify-between items-center mt-4">
-      <p class="text-[10px] text-gray-500">Payment</p>
-      <p class="font-bold text-sm">-US$739</p>
-    </div>
-  </div>
-
-  <div class="bg-white rounded-xl px-4 py-5">
-    <div class="flex justify-between items-start">
-      <div class="flex items-center space-x-4">
-        <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" alt="AIRBNB PAYMENTS UK LIMITED" />
-        <div>
-          <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
-          <p class="text-xs text-gray-500">2 May</p>
-        </div>
-      </div>
-    </div>
-    <div class="flex justify-between items-center mt-4">
-      <p class="text-[10px] text-gray-500">Payment received</p>
-      <p class="text-sm font-semibold text-green-600">+US$688.00</p>
-    </div>
-  </div>
-
-  <!-- Repeat similarly for all other transactions, changing the content as needed -->
-
+  </div>
 </div>
 
+<!-- Transactions -->
+<div class="mt-6 space-y-1 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-t-xl px-4 py-5">
+    <div class="flex justify-between">
+      <!-- Left side: image and name/date -->
+      <div class="flex">
+        <div class="flex flex-col items-start mr-4">
+          <img class="h-10 w-10 rounded-full" src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <p class="text-sm font-semibold">THUNES</p>
+          <p class="text-xs text-gray-500">7 May</p>
+        </div>
+      </div>
+    </div>
+<!-- Bottom row: Payment label and amount on the same line -->
+    <div class="flex justify-between items-center mt-4">
+      <p class="text-[10px] text-gray-500">Payment</p>
+      <p class="font-bold text-sm">-US$739</p>
+    </div>
+  </div>
+</div>
+  
+<div class="mt-6 space-y-1 px-4">
+  <div class="max-w-[380px] mx-auto bg-white px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <!-- Left: Image and name -->
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">2 May</p>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom row: "Payment received" left, amount right -->
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$688.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-1 px-4">
+  <div class="max-w-[380px] mx-auto bg-white px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">2 May</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$688.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">27 Apr</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$432.47</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Transactions -->
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex justify-between">
+      <!-- Left side: image and name/date -->
+      <div class="flex">
+        <div class="flex flex-col items-start mr-4">
+          <img class="h-10 w-10 rounded-full" src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <p class="text-sm font-semibold">THUNES</p>
+          <p class="text-xs text-gray-500">19 Apr</p>
+        </div>
+      </div>
+    </div>
+<!-- Bottom row: Payment label and amount on the same line -->
+    <div class="flex justify-between items-center mt-4">
+      <p class="text-[10px] text-gray-500">Payment</p>
+      <p class="font-bold text-sm">-US$1640.20</p>
+    </div>
+  </div>
+  </div>
+  
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">19 Apr</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$1,221.96</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">11 Apr</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$763.20</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Continue appending remaining transactions here up to 20 total -->
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">28 Apr</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$188.20</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Transactions -->
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex justify-between">
+      <!-- Left side: image and name/date -->
+      <div class="flex">
+        <div class="flex flex-col items-start mr-4">
+          <img class="h-10 w-10 rounded-full" src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <p class="text-sm font-semibold">THUNES</p>
+          <p class="text-xs text-gray-500">27 Apr</p>
+        </div>
+      </div>
+    </div>
+<!-- Bottom row: Payment label and amount on the same line -->
+    <div class="flex justify-between items-center mt-4">
+      <p class="text-[10px] text-gray-500">Payment</p>
+      <p class="font-bold text-sm">-US$420.60</p>
+    </div>
+  </div>
+</div>
+  
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">27 Apr</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$432.47</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">19 Apr</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$1,221.96</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Transactions -->
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex justify-between">
+      <!-- Left side: image and name/date -->
+      <div class="flex">
+        <div class="flex flex-col items-start mr-4">
+          <img class="h-10 w-10 rounded-full" src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <p class="text-sm font-semibold">THUNES</p>
+          <p class="text-xs text-gray-500">12 Apr</p>
+        </div>
+      </div>
+    </div>
+<!-- Bottom row: Payment label and amount on the same line -->
+    <div class="flex justify-between items-center mt-4">
+      <p class="text-[10px] text-gray-500">Payment</p>
+      <p class="font-bold text-sm">-US$1400.90</p>
+    </div>
+  </div>
+</div>
+  
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">11 Apr</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$763.20</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Continue appending remaining transactions here up to 20 total -->
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">26 Mar</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$688.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Previous 14 transactions here -->
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">24 Mar</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$943.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">20 Mar</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$401.25</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">12 Mar</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$877.00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">5 Mar</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$1,148.80</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">25 Feb</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$588.35</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">14 Feb</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$716.75</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">6 Feb</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$982.90</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">28 Jan</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$744.20</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-6 space-y-3 px-4">
+  <div class="max-w-[380px] mx-auto bg-white rounded-xl px-4 py-5">
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start">
+        <div class="flex">
+          <div class="flex flex-col items-start mr-3">
+            <img class="h-10 w-10 rounded-full" src="InShot_20250509_153055158.jpg" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-sm font-semibold">AIRBNB PAYMENTS UK LIMITED</p>
+            <p class="text-xs text-gray-500">20 Jan</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[10px] text-gray-500">Payment received</p>
+        <p class="text-sm font-semibold text-green-600">+US$844.40</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Install Button -->
+<div class="mt-4 px-4 flex justify-center">
+  <button id="installBtn" class="bg-black text-white font-bold py-2.5 px-6 rounded-full hidden">
+    Install App
+  </button>
+</div>
+  
+<nav class="fixed bottom-0 left-0 w-full max-w-md mx-auto z-50">
+  <img src="1747338187648.png" alt="PayPal-style Bottom Nav" class="w-full h-auto">
+</nav>
+
+<script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.classList.remove('hidden'); // Show the install button
+  });
+
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      deferredPrompt = null;
+      installBtn.classList.add('hidden'); // Hide the button
+    }
+  });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }).catch((error) => {
+        console.log('Service Worker registration failed:', error);
+      });
+    });
+  }
+</script>
 </body>
-</html>
+  </html>
