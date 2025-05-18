@@ -2,85 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="theme-color" content="#f2f4fb">  <!-- Adjust the color here -->
+  <meta name="theme-color" content="#f2f4fb">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Payment Received</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-black font-sans max-w-[430px] mx-auto">
+<body class="bg-[#f2f4fb] text-black font-sans max-w-md mx-auto">
 
- <!-- Header -->
+<!-- Header -->
 <div class="relative px-4 pt-4 pb-2">
-  <!-- Back Arrow -->
   <button onclick="location.href='index.html'" class="absolute left-4 top-4">
     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
     </svg>
   </button>
-
-  <!-- Title centered -->
   <h1 class="text-lg font-medium text-center">Payment received</h1>
+</div>
 
-  <!-- Payment Info Line -->
-  <div class="px-4 mt-2">
-    <div class="flex items-start justify-between">
-      <!-- Left Side: Image + Text -->
-      <div class="flex space-x-3">
-        <img src="./airbnb-logo.png" alt="Airbnb Logo" class="w-6 h-6 mt-1">
-        <div>
-          <p class="text-sm font-bold leading-tight">
-            AIRBNB PAYMENTS<br>UK LIMITED
-          </p>
-          <p class="text-sm text-gray-600 mt-1">Feb 8, 05:51 pm</p>
-        </div>
-      </div>
-      <!-- Right Side: Amount with extra space -->
-      <div class="pl-4 ml-2">
-        <p class="text-green-600 font-semibold text-sm whitespace-nowrap">+US$18.92</p>
+<div class="bg-white rounded-2xl shadow-md mt-4 p-4">
+  <div class="flex items-start justify-between">
+    <div class="flex space-x-3">
+      <img src="./airbnb-logo.png" alt="Airbnb Logo" class="w-8 h-8 mt-1">
+      <div>
+        <p class="text-sm font-bold leading-tight">
+          AIRBNB PAYMENTS<br>UK LIMITED
+        </p>
+        <p class="text-sm text-gray-600 mt-1">Feb 8, 05:51 pm</p>
       </div>
     </div>
-  </div>
-
-  <hr class="my-4 border-t border-gray-200" />
-
-  <!-- Details Section -->
-  <div class="mt-[2px] space-y-0">
-    <h2 class="text-sm font-medium text-gray-800">Details</h2>
-    <div class="flex justify-between text-sm">
-      <span>Amount</span>
-      <span>US$18.92</span>
-    </div>
-    <div class="flex justify-between text-sm font-medium">
-      <span>Total</span>
-      <span>US$18.92</span>
+    <div class="pl-4 ml-2">
+      <p class="text-green-600 font-semibold text-sm whitespace-nowrap">+US$18.92</p>
     </div>
   </div>
+</div>
 
-  <hr class="my-4 border-t border-gray-200" />
-
-  <!-- Participants -->
-  <div class="mt-[2px] space-y-0">
-    <p class="text-sm">You and AIRBNB PAYMENTS UK LIMITED</p>
-    <div class="flex items-center space-x-2">
-      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5H4.5a2.25 2.25 0 01-2.25-2.25V6.75M21.75 6.75A2.25 2.25 0 0019.5 4.5H4.5A2.25 2.25 0 002.25 6.75M21.75 6.75l-9.72 6.48a.75.75 0 01-.84 0L2.25 6.75" />
-      </svg>
-      <span class="text-sm text-blue-600">Email</span>
-    </div>
+<!-- Details Section -->
+<div class="bg-white rounded-2xl shadow-md mt-4 p-4">
+  <h2 class="text-sm font-medium text-gray-800">Details</h2>
+  <div class="flex justify-between text-sm mt-2">
+    <span>Amount</span>
+    <span>US$18.92</span>
   </div>
-
-  <hr class="my-4 border-t border-gray-200" />
-
-  <!-- Transaction ID -->
-  <div class="px-4 space-y-2 pb-10">
-    <p class="text-sm font-medium text-gray-800">Transaction ID</p>
-    <div class="flex items-center justify-between">
-      <span class="text-sm">9CX87707DJ704612M</span>
-      <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15.75H6A2.25 2.25 0 013.75 13.5v-9A2.25 2.25 0 016 2.25h9A2.25 2.25 0 0117.25 4.5v2.25M8.25 15.75h9A2.25 2.25 0 0019.5 13.5v-9M8.25 15.75V19.5A2.25 2.25 0 0010.5 21.75h9A2.25 2.25 0 0021.75 19.5v-9A2.25 2.25 0 0019.5 8.25H17.25" />
-      </svg>
-    </div>
+  <div class="flex justify-between text-sm font-medium mt-2">
+    <span>Total</span>
+    <span>US$18.92</span>
   </div>
+</div>
+
+<!-- Participants -->
+<div class="bg-white rounded-2xl shadow-md mt-4 p-4">
+  <p class="text-sm">You and AIRBNB PAYMENTS UK LIMITED</p>
+  <div class="flex items-center space-x-2 mt-2">
+    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5H4.5a2.25 2.25 0 01-2.25-2.25V6.75M21.75 6.75A2.25 2.25 0 0019.5 4.5H4.5A2.25 2.25 0 002.25 6.75M21.75 6.75l-9.72 6.48a.75.75 0 01-.84 0L2.25 6.75" />
+    </svg>
+    <span class="text-sm text-blue-600">Email</span>
+  </div>
+</div>
+
+<!-- Transaction ID -->
+<div class="bg-white rounded-2xl shadow-md mt-4 p-4 mb-10">
+  <p class="text-sm font-medium text-gray-800">Transaction ID</p>
+  <div class="flex items-center justify-between mt-2">
+    <span class="text-sm">9CX87707DJ704612M</span>
+    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15.75H6A2.25 2.25 0 013.75 13.5v-9A2.25 2.25 0 016 2.25h9A2.25 2.25 0 0117.25 4.5v2.25M8.25 15.75h9A2.25 2.25 0 0019.5 13.5v-9M8.25 15.75V19.5A2.25 2.25 0 0010.5 21.75h9A2.25 2.25 0 0021.75 19.5v-9A2.25 2.25 0 0019.5 8.25H17.25" />
+    </svg>
+  </div>
+</div>
 
 </body>
-</html
+</html>
