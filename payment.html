@@ -1,73 +1,78 @@
-""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="theme-color" content="#f2f4fb">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment Received</title>
+  <meta name="viewport" content="width=430, initial-scale=1.0" />
+  <title>Payment Detail</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-[#f2f4fb] text-black font-sans max-w-[430px] mx-auto">
+<body class="bg-[#f2f4fb] max-w-[430px] mx-auto text-black">
 
- <!-- Header -->
-<div class="relative px-4 pt-4 pb-2">
-  <!-- Title centered -->
-  <h1 class="text-lg font-medium text-center">Payment received</h1>
+  <!-- Title Bar -->
+  <div class="flex items-center px-4 pt-6 pb-4 bg-white">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+    <h1 class="text-lg font-medium">Payment</h1>
+  </div>
 
-  <!-- Payment Info Line -->
-  <div class="px-4 mt-2">
-    <div class="flex items-start justify-between">
-      <!-- Left Side: Image + Text -->
-      <div class="flex space-x-3">
-        <img src="./233.PNG" alt="Merchant Icon" class="w-10 h-10 mt-1">
-        <div>
-          <p class="text-sm font-bold leading-tight">
-            AIRBNB PAYMENTS<br>UK LIMITED
-          </p>
-          <p class="text-sm text-gray-600 mt-1">Feb 8, 05:51 pm</p>
-        </div>
+  <!-- Merchant Section -->
+  <div class="flex items-center justify-between px-4 py-4 bg-white">
+    <div class="flex items-center space-x-4">
+      <div class="bg-blue-600 rounded-full p-3">
+        <!-- Replace this src with your actual merchant icon image -->
+        <img src="https://via.placeholder.com/24" alt="Merchant" class="h-6 w-6">
       </div>
-      <!-- Right Side: Amount in Black -->
-      <div class="pl-4 ml-2">
-        <p class="text-black font-semibold text-sm whitespace-nowrap">+US$18.92</p>
+      <div>
+        <p class="font-bold text-sm">THUNES</p>
+        <p class="text-sm text-gray-700">Apr 18, 07:10 pm</p>
+        <a href="#" class="text-sm text-blue-600 underline">Show history</a>
       </div>
+    </div>
+    <p class="text-black font-semibold">-US$1.49</p>
+  </div>
+
+  <hr class="border-t border-gray-200 my-2">
+
+  <!-- Order Summary -->
+  <div class="px-4 space-y-4 bg-white py-4">
+    <div>
+      <p class="text-sm font-semibold mb-1">Order summary</p>
+      <p class="text-sm">Withdraw from 254790408472</p>
+      <p class="text-sm">Qty: 1</p>
+    </div>
+
+    <div>
+      <p class="text-sm font-semibold mb-1">From</p>
+      <p class="text-sm">PayPal balance</p>
+      <a href="#" class="text-sm text-blue-600 underline">Show payment info</a>
     </div>
   </div>
 
-  <hr class="my-4 border-t border-gray-200" />
+  <hr class="border-t border-gray-200 my-2">
 
-  <!-- Details Section -->
-  <div class="mt-[2px] space-y-0">
-    <h2 class="text-sm font-medium text-gray-800">Details</h2>
-    <div class="flex justify-between text-sm">
-      <span>Amount</span>
-      <span>US$18.92</span>
-    </div>
-    <div class="flex justify-between text-sm font-medium">
-      <span>Total</span>
-      <span>US$18.92</span>
-    </div>
-  </div>
-
-  <hr class="my-4 border-t border-gray-200" />
-
-  <!-- Participants -->
-  <div class="mt-[2px] space-y-0">
-    <p class="text-sm">You and AIRBNB PAYMENTS UK LIMITED</p>
-    <div class="flex items-center space-x-2">
-      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5H4.5a2.25 2.25 0 01-2.25-2.25V6.75M21.75 6.75A2.25 2.25 0 0019.5 4.5H4.5A2.25 2.25 0 002.25 6.75M21.75 6.75l-9.72 6.48a.75.75 0 01-.84 0L2.25 6.75" />
+  <!-- Need Help -->
+  <div class="px-4 py-4 bg-white">
+    <p class="text-sm font-semibold mb-2">Need help?</p>
+    <div class="flex items-center space-x-2 text-blue-600 font-medium">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
       </svg>
-      <span class="text-sm text-blue-600">Email</span>
+      <span>Report a Problem</span>
     </div>
-  </div>
 
-  <hr class="my-4 border-t border-gray-200" />
-
-  <!-- Transaction ID -->
-  <div class="px-4 space-y-2 pb-10">
-    <img src="./233.PNG" alt="Transaction Image" class="w-full h-auto">
+    <p class="text-xs text-gray-700 mt-4">
+      If there's a problem, make sure to contact seller through PayPal by <strong>15 Oct 2025</strong>. You may be eligible for purchase protection.
+    </p>
   </div>
 
 </body>
-</html>""
+</html>
