@@ -8,12 +8,17 @@
 </head>
 <body class="bg-white text-black font-sans max-w-[430px] mx-auto">
 
-  <!-- Header -->
-<div class="flex items-center justify-between px-4 pt-4 pb-2 mb-4">
-    <a href="index.html" class="text-2xl font-light">&larr;</a>
-    <h1 class="text-lg font-medium">Payment received</h1>
-    <div class="w-6"></div>
-  </div>
+ <!-- Header -->
+<div class="relative px-4 pt-4 pb-2">
+  <!-- Back Arrow -->
+  <button onclick="location.href='index.html'" class="absolute left-4 top-4">
+    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
+    </svg>
+  </button>
+
+  <!-- Title centered -->
+  <h1 class="text-lg font-medium text-center">Payment received</h1>
 
   <!-- Payment Info Line -->
   <div class="px-4 mt-2">
