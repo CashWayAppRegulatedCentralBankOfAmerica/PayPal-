@@ -9,78 +9,79 @@
 </head>
 <body class="bg-[#f2f4fb] text-black font-sans max-w-[430px] mx-auto">
 
- <!-- Header -->
-<div class="relative px-4 pt-4 pb-2">
-  <!-- Back Arrow -->
-  <button onclick="location.href='index.html'" class="absolute left-4 top-4">
-    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
-    </svg>
-  </button>
+  <!-- Header -->
+  <div class="relative px-4 pt-4 pb-2">
+    <!-- Back Arrow -->
+    <button onclick="location.href='index.html'" class="absolute left-4 top-4">
+      <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
+      </svg>
+    </button>
 
-  <!-- Title centered -->
-  <h1 class="text-lg font-medium text-center">Payment received</h1>
+    <!-- Title centered -->
+    <h1 class="text-lg font-medium text-center">Payment received</h1>
 
-  <!-- Payment Info Line -->
-  <div class="px-4 mt-2">
-    <div class="flex items-start justify-between bg-[#f2f4fb] p-3">
-      <div class="flex space-x-3">
-        <img src="./airbnb-logo.png" alt="Airbnb Logo" class="w-6 h-6 mt-1">
-        <div>
-          <p class="text-sm font-bold leading-tight">
-            AIRBNB PAYMENTS<br>UK LIMITED
-          </p>
-          <p class="text-sm text-gray-600 mt-1">Feb 8, 05:51 pm</p>
+    <!-- Payment Info Line -->
+    <div class="px-4 mt-2">
+      <div class="flex items-start justify-between bg-[#f2f4fb] p-3">
+        <div class="flex space-x-3">
+          <img src="./airbnb-logo.png" alt="Airbnb Logo" class="w-6 h-6 mt-1">
+          <div>
+            <p class="text-sm font-bold leading-tight">
+              AIRBNB PAYMENTS<br>UK LIMITED
+            </p>
+            <p class="text-sm text-gray-600 mt-1">Feb 8, 05:51 pm</p>
+          </div>
+        </div>
+        <div class="pl-4 ml-2">
+          <p class="text-green-600 font-semibold text-sm whitespace-nowrap">+US$18.92</p>
         </div>
       </div>
-      <div class="pl-4 ml-2">
-        <p class="text-green-600 font-semibold text-sm whitespace-nowrap">+US$18.92</p>
+    </div>
+
+    <hr class="my-2 border-t border-gray-300" />
+
+    <!-- Details Section -->
+    <div class="space-y-1">
+      <h2 class="text-sm font-medium text-gray-800">Details</h2>
+      <div class="flex justify-between text-sm bg-[#f2f4fb] p-3">
+        <span>Amount</span>
+        <span>US$18.92</span>
+      </div>
+      <div class="flex justify-between text-sm font-medium bg-[#f2f4fb] p-3">
+        <span>Total</span>
+        <span>US$18.92</span>
       </div>
     </div>
-  </div>
 
-  <hr class="my-2 border-t border-gray-200" />
+    <hr class="my-2 border-t border-gray-300" />
 
-  <!-- Details Section -->
-  <div class="mt-[1px] space-y-0 bg-[#f2f4fb] p-3">
-    <h2 class="text-sm font-medium text-gray-800">Details</h2>
-    <div class="flex justify-between text-sm">
-      <span>Amount</span>
-      <span>US$18.92</span>
-    </div>
-    <div class="flex justify-between text-sm font-medium">
-      <span>Total</span>
-      <span>US$18.92</span>
-    </div>
-  </div>
-
-  <hr class="my-2 border-t border-gray-200" />
-
-  <!-- Participants -->
-  <div class="mt-[1px] space-y-0 bg-[#f2f4fb] p-3">
-    <p class="text-sm">You and AIRBNB PAYMENTS UK LIMITED</p>
-    <div class="flex items-center space-x-2">
-      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5H4.5a2.25 2.25 0 01-2.25-2.25V6.75M21.75 6.75A2.25 2.25 0 0019.5 4.5H4.5A2.25 2.25 0 002.25 6.75M21.75 6.75l-9.72 6.48a.75.75 0 01-.84 0L2.25 6.75" />
-      </svg>
-      <span class="text-sm text-blue-600">Email</span>
-    </div>
-  </div>
-
-  <hr class="my-2 border-t border-gray-200" />
-
-  <!-- Transaction ID -->
-  <div class="px-4 space-y-2 pb-10 bg-[#f2f4fb] p-3">
-    <p class="text-sm font-medium text-gray-800">Transaction ID</p>
-    <div class="flex items-center justify-between">
-      <span class="text-sm">9CX87707DJ704612M</span>
-      <button onclick="navigator.clipboard.writeText('9CX87707DJ704612M')" class="text-gray-600">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15.75H6A2.25 2.25 0 013.75 13.5v-9A2.25 2.25 0 016 2.25h9A2.25 2.25 0 0117.25 4.5v2.25M8.25 15.75h9A2.25 2.25 0 0019.5 13.5v-9M8.25 15.75V19.5A2.25 2.25 0 0010.5 21.75h9A2.25 2.25 0 0021.75 19.5v-9A2.25 2.25 0 0019.5 8.25H17.25" />
+    <!-- Participants -->
+    <div class="space-y-1">
+      <p class="text-sm">You and AIRBNB PAYMENTS UK LIMITED</p>
+      <div class="flex items-center space-x-2 bg-[#f2f4fb] p-3">
+        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5H4.5a2.25 2.25 0 01-2.25-2.25V6.75" />
         </svg>
-      </button>
+        <span class="text-sm text-blue-600">Email</span>
+      </div>
     </div>
-  </div>
 
+    <hr class="my-2 border-t border-gray-300" />
+
+    <!-- Transaction ID -->
+    <div class="px-4 space-y-2 pb-10">
+      <p class="text-sm font-medium text-gray-800">Transaction ID</p>
+      <div class="flex items-center justify-between bg-[#f2f4fb] p-3 w-full">
+        <span class="text-sm">9CX87707DJ704612M</span>
+        <button onclick="navigator.clipboard.writeText('9CX87707DJ704612M')" class="text-gray-600">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15.75H6A2.25 2.25 0 013.75 13.5v-9A2.25 2.25 0 016 2.25h9A2.25 2.25 0 0117.25 4.5v2.25M8.25 15.75h9A2.25 2.25 0 0019.5 13.5v-9M8.25 15.75V19.5A2.25 2.25 0 0010.5 21.75h9A2.25 2.25 0 0021.75 19.5v-9A2.25 2.25 0 0019.5 8.25H17.25" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
