@@ -22,8 +22,8 @@
     <h1 class="text-lg font-medium text-center">Payment received</h1>
 
     <!-- Payment Info Line -->
-    <div class="px-4 mt-2">
-      <div class="flex items-start justify-between bg-[#f2f4fb] p-3">
+    <div class="bg-[#f2f4fb] px-4 py-3 mt-4">
+      <div class="flex items-start justify-between">
         <div class="flex space-x-3">
           <img src="./airbnb-logo.png" alt="Airbnb Logo" class="w-6 h-6 mt-1">
           <div>
@@ -39,49 +39,55 @@
       </div>
     </div>
 
-    <hr class="my-2 border-t border-gray-300" />
+    <div class="border-b border-gray-300 my-2"></div>
 
     <!-- Details Section -->
-    <div class="space-y-1">
+    <div class="bg-[#f2f4fb] px-4 py-3 mt-1">
       <h2 class="text-sm font-medium text-gray-800">Details</h2>
-      <div class="flex justify-between text-sm bg-[#f2f4fb] p-3">
+      <div class="flex justify-between text-sm mt-1">
         <span>Amount</span>
         <span>US$18.92</span>
       </div>
-      <div class="flex justify-between text-sm font-medium bg-[#f2f4fb] p-3">
+      <div class="flex justify-between text-sm font-medium mt-1">
         <span>Total</span>
         <span>US$18.92</span>
       </div>
     </div>
 
-    <hr class="my-2 border-t border-gray-300" />
+    <div class="border-b border-gray-300 my-2"></div>
 
     <!-- Participants -->
-    <div class="space-y-1">
+    <div class="bg-[#f2f4fb] px-4 py-3 mt-1">
       <p class="text-sm">You and AIRBNB PAYMENTS UK LIMITED</p>
-      <div class="flex items-center space-x-2 bg-[#f2f4fb] p-3">
+      <div class="flex items-center space-x-2 mt-2">
         <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5H4.5a2.25 2.25 0 01-2.25-2.25V6.75" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5H4.5a2.25 2.25 0 01-2.25-2.25V6.75M21.75 6.75A2.25 2.25 0 0019.5 4.5H4.5A2.25 2.25 0 002.25 6.75M21.75 6.75l-9.72 6.48a.75.75 0 01-.84 0L2.25 6.75" />
         </svg>
         <span class="text-sm text-blue-600">Email</span>
       </div>
     </div>
 
-    <hr class="my-2 border-t border-gray-300" />
+    <div class="border-b border-gray-300 my-2"></div>
 
     <!-- Transaction ID -->
-    <div class="px-4 space-y-2 pb-10">
-      <p class="text-sm font-medium text-gray-800">Transaction ID</p>
-      <div class="flex items-center justify-between bg-[#f2f4fb] p-3 w-full">
+    <div class="bg-[#f2f4fb] px-4 py-3 mt-1 flex justify-between items-center">
+      <div>
+        <p class="text-sm font-medium text-gray-800">Transaction ID</p>
         <span class="text-sm">9CX87707DJ704612M</span>
-        <button onclick="navigator.clipboard.writeText('9CX87707DJ704612M')" class="text-gray-600">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15.75H6A2.25 2.25 0 013.75 13.5v-9A2.25 2.25 0 016 2.25h9A2.25 2.25 0 0117.25 4.5v2.25M8.25 15.75h9A2.25 2.25 0 0019.5 13.5v-9M8.25 15.75V19.5A2.25 2.25 0 0010.5 21.75h9A2.25 2.25 0 0021.75 19.5v-9A2.25 2.25 0 0019.5 8.25H17.25" />
-          </svg>
-        </button>
       </div>
+      <button onclick="copyToClipboard('9CX87707DJ704612M')" class="text-gray-600">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15.75H6A2.25 2.25 0 013.75 13.5v-9A2.25 2.25 0 016 2.25h9A2.25 2.25 0 0117.25 4.5v2.25M8.25 15.75h9A2.25 2.25 0 0019.5 13.5v-9M8.25 15.75V19.5A2.25 2.25 0 0010.5 21.75h9A2.25 2.25 0 0021.75 19.5v-9A2.25 2.25 0 0019.5 8.25H17.25" />
+        </svg>
+      </button>
     </div>
-
   </div>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text);
+      alert('Transaction ID copied to clipboard');
+    }
+  </script>
 </body>
 </html>
