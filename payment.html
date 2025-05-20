@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta name="theme-color" content="#f2f4fb">  <!-- Adjust the color here -->
-<link rel="icon" href="path/to/icon.png" sizes="192x192" />
-<link rel="apple-touch-icon" href="path/to/icon.png" sizes="192x192" />
-<link rel="manifest" href="manifest.json" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f2f4fb">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" href="path/to/icon.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="path/to/icon.png" sizes="192x192" />
+  <link rel="manifest" href="manifest.json" />
   <title>Payment</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -16,41 +16,41 @@
     }
   </style>
 </head>
-<body class="pb-40 max-w-md mx-auto">
-</head>
-<body class="bg-[#f2f4fb] max-w-[430px] mx-auto text-black">
 
- <!-- Title Bar -->
-<div class="relative px-4 pt-4 pb-2">
-  <!-- Back Arrow -->
-  <button onclick="location.href='index.html'" class="absolute left-4 top-4" aria-label="Go back">
-    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
-    </svg>
-  </button>
+<body class="bg-[#f2f4fb] max-w-[430px] mx-auto text-black pb-40">
 
-  <!-- Title Centered -->
-  <div class="flex justify-center">
-    <h1 class="text-lg font-medium">Payment</h1>
+  <!-- Top Safe Area Filler with White Background -->
+  <div class="h-[env(safe-area-inset-top)] bg-white"></div>
+
+  <!-- Title Bar -->
+  <div class="relative px-4 pt-4 pb-2 bg-white">
+    <!-- Back Arrow -->
+    <button onclick="location.href='index.html'" class="absolute left-4 top-4" aria-label="Go back">
+      <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
+      </svg>
+    </button>
+
+    <!-- Centered Title -->
+    <h1 class="absolute inset-x-0 top-4 text-center text-lg font-medium">Payment</h1>
   </div>
-</div>
 
   <!-- Merchant Section -->
-<div class="pt-[env(safe-area-inset-top)] flex items-center justify-between px-4 py-4 bg-white">
-  <div class="flex">
-    <div class="flex flex-col items-start mr-4">
-      <img class="h-10 w-10 rounded-full" src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" />
+  <div class="flex items-center justify-between px-4 py-4 bg-white">
+    <div class="flex">
+      <div class="flex flex-col items-start mr-4">
+        <img class="h-10 w-10 rounded-full" src="ChatGPT Image May 9, 2025, 03_05_18 PM.png" />
+      </div>
+      <div>
+        <p class="font-bold text-sm">THUNES</p>
+        <p class="text-sm text-gray-700">May 18, 07:52 pm</p>
+        <a href="#" class="text-sm text-blue-600 underline">Show history</a>
+      </div>
     </div>
-    <div>
-      <p class="font-bold text-sm">THUNES</p>
-      <p class="text-sm text-gray-700">May 18, 07:52 pm</p>
-      <a href="#" class="text-sm text-blue-600 underline">Show history</a>
-    </div>
+    <p class="text-black font-semibold">-US$1500.50</p>
   </div>
-  <p class="text-black font-semibold">-US$1500.50</p>
-</div>
 
-<hr class="border-t my-2" style="border-color: #f2f4fb;" />
+<hr class="border-t" style="border-color: #f2f4fb;" class="my-2" />
 
   <!-- Order Summary -->
   <div class="px-4 space-y-4 bg-white py-4">
