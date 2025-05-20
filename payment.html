@@ -6,7 +6,7 @@
 <link rel="icon" href="path/to/icon.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="path/to/icon.png" sizes="192x192" />
 <link rel="manifest" href="manifest.json" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Payment</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -16,12 +16,13 @@
     }
   </style>
 </head>
+  <div class="h-[env(safe-area-inset-top)] bg-white"></div>
 <body class="pb-40 max-w-md mx-auto">
 </head>
 <body class="bg-[#f2f4fb] max-w-[430px] mx-auto text-black">
 
  <!-- Title Bar -->
-<div class="relative px-4 pt-4 pb-2">
+  <div class="relative px-4 pt-4 pb-2 bg-white">
   <!-- Back Arrow -->
   <button onclick="location.href='index.html'" class="absolute left-4 top-4" aria-label="Go back">
     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
