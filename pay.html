@@ -74,9 +74,11 @@
 
   <hr class="border-t" style="border-color: #f2f4fb;" />
 
- <div style="min-height: calc(100vh - 400px)" class="bg-white px-4 py-4 flex items-center justify-between">
-  <!-- Transaction ID Card -->
-  <div class="flex justify-between items-center px-4 py-4 bg-white">
+<!-- Full-height container with white background -->
+<div class="bg-white min-h-screen flex flex-col">
+  
+  <!-- Your existing Transaction ID Card, stays pinned at the top -->
+  <div class="flex justify-between items-center px-4 py-4">
     <div>
       <p class="text-sm font-semibold text-gray-800">Transaction ID</p>
       <span class="text-sm">9CX87707DJ704612M</span>
@@ -87,7 +89,6 @@
       </svg>
     </button>
   </div>
-</div>
 
   <script>
     function copyToClipboard(text) {
