@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#f2f4fb">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money received</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f2f4fb] text-black font-sans max-w-[430px] mx-auto">
+
+  <!-- Header -->
+  <div class="relative px-4 pt-4 pb-2">
+    <!-- Back Arrow -->
+    <button onclick="location.href='index.html'" class="absolute left-4 top-4">
+      <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
+      </svg>
+    </button>
+
+    <!-- Title centered -->
+    <h1 class="text-lg font-medium text-center">Money received</h1>
+
+    <!-- Payment Info Line -->
+    <div class="bg-[#f2f4fb] px-4 py-3 mt-4">
+      <div class="flex items-start justify-between">
+        <div class="flex space-x-3">
+          <img src="./airbnb-logo.png" alt="Airbnb Logo" class="w-6 h-6 mt-1">
+          <div>
+            <p class="text-sm font-bold leading-tight">
+              TABITHA WANGARI</p>
+            <p class="text-sm text-gray-600 mt-1">May 18, 07:49 pm</p>
+          </div>
+        </div>
+        <div class="pl-4 ml-2">
+          <p class="text-green-600 font-semibold text-sm whitespace-nowrap">+US$2000.50</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-b border-gray-300 my-2"></div>
+
+    <!-- Details Section -->
+    <div class="bg-[#f2f4fb] px-4 py-3 mt-1">
+      <h2 class="text-sm font-medium text-gray-800">Details</h2>
+      <div class="flex justify-between text-sm mt-1">
+        <span>Amount</span>
+        <span>US$2000.50</span>
+      </div>
+      <div class="flex justify-between text-sm font-medium mt-1">
+        <span>Total</span>
+        <span>US$2000.50</span>
+      </div>
+    </div>
+
+    <div class="border-b border-gray-300 my-2"></div>
+
+    <!-- Participants -->
+    <div class="bg-[#f2f4fb] px-4 py-3 mt-1">
+      <p class="text-sm">You and TABITHA WANGARI</p>
+      <div class="flex items-center space-x-2 mt-2">
+        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5H4.5a2.25 2.25 0 01-2.25-2.25V6.75M21.75 6.75A2.25 2.25 0 0019.5 4.5H4.5A2.25 2.25 0 002.25 6.75M21.75 6.75l-9.72 6.48a.75.75 0 01-.84 0L2.25 6.75" />
+        </svg>
+        <span class="text-sm text-blue-600">Email</span>
+      </div>
+    </div>
+
+    <div class="border-b border-gray-300 my-2"></div>
+
+    <!-- Transaction ID -->
+    <div class="bg-[#f2f4fb] px-4 py-3 mt-1 flex justify-between items-center">
+      <div>
+        <p class="text-sm font-medium text-gray-800">Transaction ID</p>
+        <span class="text-sm">9CX87707DJ704612M</span>
+      </div>
+      <button onclick="copyToClipboard('9CX87707DJ704612M')" class="text-gray-600">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15.75H6A2.25 2.25 0 013.75 13.5v-9A2.25 2.25 0 016 2.25h9A2.25 2.25 0 0117.25 4.5v2.25M8.25 15.75h9A2.25 2.25 0 0019.5 13.5v-9M8.25 15.75V19.5A2.25 2.25 0 0010.5 21.75h9A2.25 2.25 0 0021.75 19.5v-9A2.25 2.25 0 0019.5 8.25H17.25" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text);
+      alert('Transaction ID copied to clipboard');
+    }
+  </script>
+</body>
+</html>
