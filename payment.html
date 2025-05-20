@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta name="theme-color" content="#f2f4fb">  <!-- Adjust the color here -->
-<link rel="icon" href="path/to/icon.png" sizes="192x192" />
-<link rel="apple-touch-icon" href="path/to/icon.png" sizes="192x192" />
-<link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#f2f4fb">
+  <link rel="icon" href="path/to/icon.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="path/to/icon.png" sizes="192x192" />
+  <link rel="manifest" href="manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Payment</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,25 +16,24 @@
     }
   </style>
 </head>
+
+<body class="bg-[#f2f4fb] max-w-[430px] mx-auto text-black pb-40">
+
+  <!-- This div creates white background behind the status bar -->
   <div class="h-[env(safe-area-inset-top)] bg-white"></div>
-<body class="pb-40 max-w-md mx-auto">
-</head>
-<body class="bg-[#f2f4fb] max-w-[430px] mx-auto text-black">
 
- <!-- Title Bar -->
+  <!-- Title Bar -->
   <div class="relative px-4 pt-4 pb-2 bg-white">
-  <!-- Back Arrow -->
-  <button onclick="location.href='index.html'" class="absolute left-4 top-4" aria-label="Go back">
-    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
-    </svg>
-  </button>
+    <!-- Back Arrow -->
+    <button onclick="location.href='index.html'" class="absolute left-4 top-4" aria-label="Go back">
+      <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
+      </svg>
+    </button>
 
-  <!-- Title Centered -->
-  <div class="flex justify-center">
-    <h1 class="text-lg font-medium">Payment</h1>
+    <!-- Title Centered -->
+    <h1 class="text-center text-lg font-medium">Payment</h1>
   </div>
-</div>
 
   <!-- Merchant Section -->
   <div class="flex items-center justify-between px-4 py-4 bg-white">
