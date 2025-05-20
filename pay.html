@@ -79,18 +79,8 @@
   
   <!-- Your existing Transaction ID Card, stays pinned at the top -->
   <div class="flex justify-between items-center px-4 py-4">
-    <div>
-      <p class="text-sm font-semibold text-gray-800">Transaction ID</p>
-      <span class="text-sm">9CX87707DJ704612M</span>
-    </div>
-    <button onclick="copyToClipboard('9CX87707DJ704612M')" class="text-gray-600" aria-label="Copy transaction ID">
-      <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-  <path d="M25 15H15V25H25V15Z" stroke="black" stroke-width="2" fill="none"/>
-  <path d="M30 10H20V20H30V10Z" stroke="black" stroke-width="2" fill="none"/>
-</svg>
-    </button>
-  </div>
-
+  <img src="/images/transaction-summary.png" alt="Transaction summary" class="w-full h-auto object-contain" />
+</div>
   <script>
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text);
